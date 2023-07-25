@@ -1,4 +1,7 @@
+import { useRef } from 'react';
 import Image from 'next/image'
+//@ts-ignore
+import NewsTicker, { Directions } from "react-advanced-news-ticker";
 import PhotoContainer from '@/components/photo'
 import TextBox from '@/components/TextBox'
 import Carousel from 'react-multi-carousel';
@@ -7,6 +10,7 @@ import ExpandingCards from '@/components/expandingCards';
 import { cardData } from '@/constants';
 import PhotoAlbum from 'react-photo-album';
 import { photos } from '@/constants/photos';
+import 'regenerator-runtime/runtime';
 
 const responsive = {
   desktop: {
@@ -27,6 +31,7 @@ const responsive = {
 };
 
 export default function Home() {
+  const ref = useRef(null);
   return (
     <main
     className="font-Mont"
@@ -72,6 +77,7 @@ export default function Home() {
             </PhotoContainer>
           </Carousel>
         </div>
+
         <div className='mt-[90px]'>
           <div className='flex gap-x-4 justify-center mb-6'>
             <p className='text-primary text-[30px] font-semibold text-center'>Brands Trusting Social Aviator</p>
@@ -98,12 +104,90 @@ export default function Home() {
 
         <div className='py-4 px-[80px] bg-[#894935] grid grid-cols-2 gap-x-8 items-center border-0'>
           <div className="col-span-1 grid gap-x-2 h-[165px] gap-y-2 grid-cols-2 text-3xl font-normal tracking-widest">
-            <TextBox content='1420 BRANDS'/>
-            <TextBox content='300 AD CAMPAIGNS'/>
-            <TextBox content='8.5 Million REACH'/>
-            <TextBox content='74 SPONSORED'/>
-            <TextBox content='1200 CELEBRITIES'/>
-            <TextBox content='15 CATEGORIES'/>
+            <TextBox content='1420 BRANDS'>
+              <NewsTicker 
+              ref={ref} 
+              id="nt-example1" 
+              direction={Directions.UP} 
+              rowHeight={30} 
+              maxRows={1} 
+              duration={4000}>
+                <div>Content 1</div>
+                <div>Content 2</div>
+                <div>Content 3</div>
+                <div>Content 4</div>
+              </NewsTicker> 
+            </TextBox>
+            <TextBox content='1420 BRANDS'>
+              <NewsTicker 
+              ref={ref} 
+              id="nt-example1" 
+              direction={Directions.UP} 
+              rowHeight={30} 
+              maxRows={1} 
+              duration={4000}>
+                <div>Content 1</div>
+                <div>Content 2</div>
+                <div>Content 3</div>
+                <div>Content 4</div>
+              </NewsTicker> 
+            </TextBox>
+            <TextBox content='1420 BRANDS'>
+              <NewsTicker 
+              ref={ref} 
+              id="nt-example1" 
+              direction={Directions.UP} 
+              rowHeight={30} 
+              maxRows={1} 
+              duration={4000}>
+                <div>Content 1</div>
+                <div>Content 2</div>
+                <div>Content 3</div>
+                <div>Content 4</div>
+              </NewsTicker> 
+            </TextBox>
+            <TextBox content='1420 BRANDS'>
+              <NewsTicker 
+              ref={ref} 
+              id="nt-example1" 
+              direction={Directions.UP} 
+              rowHeight={30} 
+              maxRows={1} 
+              duration={4000}>
+                <div>Content 1</div>
+                <div>Content 2</div>
+                <div>Content 3</div>
+                <div>Content 4</div>
+              </NewsTicker> 
+            </TextBox>
+            <TextBox content='1420 BRANDS'>
+              <NewsTicker 
+              ref={ref} 
+              id="nt-example1" 
+              direction={Directions.UP} 
+              rowHeight={30} 
+              maxRows={1} 
+              duration={4000}>
+                <div>Content 1</div>
+                <div>Content 2</div>
+                <div>Content 3</div>
+                <div>Content 4</div>
+              </NewsTicker> 
+            </TextBox>
+            <TextBox content='1420 BRANDS'>
+              <NewsTicker 
+              ref={ref} 
+              id="nt-example1" 
+              direction={Directions.UP} 
+              rowHeight={30} 
+              maxRows={1} 
+              duration={4000}>
+                <div>Content 1</div>
+                <div>Content 2</div>
+                <div>Content 3</div>
+                <div>Content 4</div>
+              </NewsTicker> 
+            </TextBox>
           </div>
 
           <div className='col-span-1 flex gap-x-4 items-center'>
