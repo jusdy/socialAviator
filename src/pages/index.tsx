@@ -21,7 +21,7 @@ export default function Home() {
           className="w-[300px] absolute top-[calc(69%)] left-[calc(50%-153px)] "
         />
 
-        <div className={`${time >= 16 ? "hidden" : "flex"} items-center animate-fadeinLogo animation-delay opacity-0 z-10`}>
+        <div className={`${time >= 8 ? "hidden" : "flex"} items-center animate-fadeinLogo animation-delay opacity-0 z-10`}>
           <div className="flex z-20 font-semibold px-[70px] ">
             <div>
               <h2 className="uppercase text-3xl mb-4">Welcome on board with</h2>
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`${time >= 16 && time < 24 ? "flex" : "hidden"} mt-20 ml-20 flex-col z-20 animate-fadeinLogo opacity-0`}>
+        <div className={`${time >= 8 && time < 12 ? "flex" : "hidden"} mt-20 ml-20 flex-col z-20 animate-fadeinLogo opacity-0`}>
           <h2 className="uppercase font-bold text-2xl mb-6 tracking-wider">We are an influencer marketing company that provides</h2>
           <h1 className="uppercase font-bold 2xl:text-[120px] xl:text-[80px] 2xl:leading-[100px] xl:leading-[80px] tracking-tighter">
           customized <p>brand solutions</p>
@@ -56,7 +56,7 @@ export default function Home() {
             With our services, your brands will soar to new heights, leaving behind the ordinary and embrace the extraordinary. </p>
         </div>
 
-        <div className={`${time >= 24 && time < 40 ? "flex" : "hidden"} flex-col text-2xl animate-fadeinText text-center px-[240px] mt-40`}>
+        <div className={`${time >= 12 && time < 20 ? "flex" : "hidden"} flex-col text-2xl animate-fadeinText text-center px-[240px] mt-40`}>
           <h1 className="font-bold mb-[60px] uppercase">Why fly with Social Aviator?</h1>
 
           <p className="font-semibold mb-10">
@@ -79,7 +79,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={`${time >= 40 ? "block" : "hidden"} w-full`}>
+        <div className={`${time >= 20 ? "block" : "hidden"} w-full`}>
           <h1 className="text-4xl uppercase font-bold mt-[180px] text-center mb-[60px]">READY FOR TAKE-OFF</h1>
 
           <p className="font-semibold text-center animate-bounce">Enter Site</p>
