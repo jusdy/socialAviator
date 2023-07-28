@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="flex justify-between items-center absolute w-full h-[130px] text-white p-14 bg-[#EF3F42]">
+        <footer className="flex justify-between items-center absolute w-full h-[130px] text-white p-14 bg-secondary">
             <p className="text-base">© Social Aviator 2023</p>
 
             <div className="flex justify-between gap-x-4 uppercase text-base font-semibold">

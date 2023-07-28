@@ -1,216 +1,91 @@
-import { useRef } from 'react';
-import Image from 'next/image'
-//@ts-ignore
-import NewsTicker, { Directions } from "react-advanced-news-ticker";
-import PhotoContainer from '@/components/photo'
-import TextBox from '@/components/TextBox'
-import Carousel from 'react-multi-carousel';
-import Marquee from "react-fast-marquee";
-import ExpandingCards from '@/components/expandingCards';
-import { cardData } from '@/constants';
-import PhotoAlbum from 'react-photo-album';
-import { photos } from '@/constants/photos';
-import 'regenerator-runtime/runtime';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 2,
-    slidesToSlide: 1 // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2 // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
-};
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const ref = useRef(null);
+  const [time, setTime] = useState(0);
+  useEffect(() =>{
+    const id = setInterval(() => {
+      setTime(prev => prev + 1);
+  }, 1000)
+  },[])
+
   return (
-    <main
-    className="font-Mont"
-    >
-      <div className='w-full relative'>
-        <img alt='aviator footer' src='/assets/images/footer-top.png' className='w-full absolute -bottom-1'/>
-        <div className='relative h-[100vh] bg-[#FFDA79] flex 2xl:gap-x-[230px] gap-x-[100px] overflow-x-hidden'>
-          <img alt='plane' className='w-full absolute bottom-0 z-0' src='assets/plane.png'/>
-          <div className='pt-[250px] pl-[94px] 2xl:w-[730px] w-[600px] z-10 relative grow flex-shrink-0'>
-            <p className='text-[#050505] text-2xl font-semibold mb-[40px]  animate-entrance'>Promote your brand through celebrities via our</p>
-            <p className='text-[#EF3F42] text-[84px] font-bold uppercase leading-[75px] tracking-tighter animate-entrance'>social production</p>
+    <main className="font-Mont">
+      <div className="w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white">
+        <img
+          src="/assets/images/Logo-big.png"
+          className="absolute top-[30px] left-[calc(50%-430px)] animate-fadeinLogo opacity-0 z-10"
+        />
 
-            <p className='text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-entrance'>
-            Production value is what adds brilliance to any campaign, this division handles end-to-end production via our internal team & external partners, 
-            we work with some of the finest Directors, DOPs, Photographers, and Post-production experts who handle Animation, VFX, Graphics, Editing, Color Grading, 
-            Dubbing, Original Soundtrack creation & many more in the most cost-effective manner.
-            </p>
-          </div>
+        <img
+          src="/assets/images/bigplane.png"
+          className="w-[300px] absolute top-[calc(69%)] left-[calc(50%-153px)] "
+        />
 
-          <Carousel
-            containerClass='flex w-full justify-between 2xl:pt-[60px] pt-[200px] z-10'
-            responsive={responsive}
-            partialVisible={true}
-            ssr={true} // means to render carousel on server-side.
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            keyBoardControl={true}
-            transitionDuration={500}
-            arrows={false}
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-          >
-            <PhotoContainer>
-              <img src='assets/images/window1.png' className='h-full'/>
-            </PhotoContainer>
-
-            <PhotoContainer>
-              <img src='assets/images/window2.png' className='h-full'/>
-            </PhotoContainer>
-
-            <PhotoContainer>
-              <img src='assets/images/window3.png' className='h-full'/>
-            </PhotoContainer>
-          </Carousel>
-        </div>
-
-        <div className='mt-[90px]'>
-          <div className='flex gap-x-4 justify-center mb-6'>
-            <p className='text-primary text-[30px] font-semibold text-center'>Brands Trusting Social Aviator</p>
-            <img src='assets/svg/heart.svg'/>
-          </div>
-
-          <Marquee>
-            {
-            Array(20).fill("").map((item, key) => 
-            <img key={key} src='/assets/images/brands.png'/>
-            )
-            }
-          </Marquee>
-        </div>
-
-        <div className='mt-[90px] mb-[150px]'>
-          <p className='text-primary text-[30px] font-semibold text-center mb-6'>Choose from over 1200+ celebrities to promote your business</p>
-
-          <ExpandingCards data={cardData}/>
-
-          <p className='text-primary text-[30px] font-semibold text-center mt-20'>1000+ brands • 850 mn+ reach</p>
-
-        </div>
-
-        <div className='py-4 px-[80px] bg-[#894935] grid grid-cols-2 gap-x-8 items-center border-0'>
-          <div className="col-span-1 grid gap-x-2 h-[165px] gap-y-2 grid-cols-2 text-3xl font-normal tracking-widest">
-            <TextBox content='1420 BRANDS'>
-              <NewsTicker 
-              ref={ref} 
-              id="nt-example1" 
-              direction={Directions.UP} 
-              rowHeight={30} 
-              maxRows={1} 
-              duration={4000}>
-                <div>Content 1</div>
-                <div>Content 2</div>
-                <div>Content 3</div>
-                <div>Content 4</div>
-              </NewsTicker> 
-            </TextBox>
-            <TextBox content='1420 BRANDS'>
-              <NewsTicker 
-              ref={ref} 
-              id="nt-example1" 
-              direction={Directions.UP} 
-              rowHeight={30} 
-              maxRows={1} 
-              duration={4000}>
-                <div>Content 1</div>
-                <div>Content 2</div>
-                <div>Content 3</div>
-                <div>Content 4</div>
-              </NewsTicker> 
-            </TextBox>
-            <TextBox content='1420 BRANDS'>
-              <NewsTicker 
-              ref={ref} 
-              id="nt-example1" 
-              direction={Directions.UP} 
-              rowHeight={30} 
-              maxRows={1} 
-              duration={4000}>
-                <div>Content 1</div>
-                <div>Content 2</div>
-                <div>Content 3</div>
-                <div>Content 4</div>
-              </NewsTicker> 
-            </TextBox>
-            <TextBox content='1420 BRANDS'>
-              <NewsTicker 
-              ref={ref} 
-              id="nt-example1" 
-              direction={Directions.UP} 
-              rowHeight={30} 
-              maxRows={1} 
-              duration={4000}>
-                <div>Content 1</div>
-                <div>Content 2</div>
-                <div>Content 3</div>
-                <div>Content 4</div>
-              </NewsTicker> 
-            </TextBox>
-            <TextBox content='1420 BRANDS'>
-              <NewsTicker 
-              ref={ref} 
-              id="nt-example1" 
-              direction={Directions.UP} 
-              rowHeight={30} 
-              maxRows={1} 
-              duration={4000}>
-                <div>Content 1</div>
-                <div>Content 2</div>
-                <div>Content 3</div>
-                <div>Content 4</div>
-              </NewsTicker> 
-            </TextBox>
-            <TextBox content='1420 BRANDS'>
-              <NewsTicker 
-              ref={ref} 
-              id="nt-example1" 
-              direction={Directions.UP} 
-              rowHeight={30} 
-              maxRows={1} 
-              duration={4000}>
-                <div>Content 1</div>
-                <div>Content 2</div>
-                <div>Content 3</div>
-                <div>Content 4</div>
-              </NewsTicker> 
-            </TextBox>
-          </div>
-
-          <div className='col-span-1 flex gap-x-4 items-center'>
-            <div className='flex flex-col gap-y-6'>
-              <p className='text-white font-bold text-[32px] uppercase leading-10'>Your one STOP PLACE FOR CELEBRITY ENGAGEMENT</p>
-
-              <button className="bg-[#EF3F42] w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest">
-                ONBOARD MY BUSINESS
-              </button>
+        <div className={`${time >= 16 ? "hidden" : "flex"} items-center animate-fadeinLogo animation-delay opacity-0 z-10`}>
+          <div className="flex z-20 font-semibold px-[70px] ">
+            <div>
+              <h2 className="uppercase text-3xl mb-4">Welcome on board with</h2>
+              <h1 className="uppercase font-bold 2xl:text-[260px] xl:text-[180px] 2xl:leading-[200px] xl:leading-[160px]">
+                social aviator
+              </h1>
             </div>
 
-            <img alt='aviator' src='/assets/avatar.png' className='ml-auto'/>
+            <div className="">
+              <span className="text-2xl tracking-wider">
+                Your <span className="bg-primary">one-stop solution</span> for
+                all your influencer marketing objectives
+              </span>
+              <img
+                alt="arrow"
+                src="/assets/images/arrow.png"
+                className="pt-10"
+              />
+            </div>
           </div>
-          
         </div>
 
-        <div className='bg-[#FFF7D3] w-full pt-16 pb-[230px] px-[76px] text-3xl font-semibold'>
-          <p className='text-primary mb-10'>Glimpse of our work</p>
+        <div className={`${time >= 16 && time < 24 ? "flex" : "hidden"} mt-20 ml-20 flex-col z-20 animate-fadeinLogo opacity-0`}>
+          <h2 className="uppercase font-bold text-2xl mb-6 tracking-wider">We are an influencer marketing company that provides</h2>
+          <h1 className="uppercase font-bold 2xl:text-[120px] xl:text-[80px] 2xl:leading-[100px] xl:leading-[80px] tracking-tighter">
+          customized <p>brand solutions</p>
+          </h1>
+          <span className="text-2xl tracking-wider uppercase mt-8 font-bold">
+            to help your brand <span className="bg-primary px-2">reach new heights.</span> 
+          </span>
+          <p className="text-2xl tracking-wider uppercase font-bold">
+            With our services, your brands will soar to new heights, leaving behind the ordinary and embrace the extraordinary. </p>
+        </div>
 
-          <PhotoAlbum layout="columns" photos={photos} columns={3} padding={15}/>
+        <div className={`${time >= 24 && time < 40 ? "flex" : "hidden"} flex-col text-2xl animate-fadeinText text-center px-[240px] mt-40`}>
+          <h1 className="font-bold mb-[60px] uppercase">Why fly with Social Aviator?</h1>
+
+          <p className="font-semibold mb-10">
+            We at Social Aviator understand the importance of speed in today's
+            fast-paced digital world. Our team of experts is dedicated to coming
+            up with innovative trending ideas, putting together effective
+            strategies, and collaborating with top-notch artists to create
+            memorable campaigns and events.  By partnering with us, you can
+            scale your business and achieve your objectives faster, allowing you
+            to soar to greater heights. Our team consists of individuals with
+            vast experience from some of the most prestigious media and
+            advertising companies in the world.
+          </p>
+
+          <p className="font-semibold">
+            By partnering with us, you can scale your business and achieve your objectives faster, allowing you to soar to greater heights.
+          </p>
+          <p className="font-semibold">
+            Our team consists of individuals with vast experience from some of the most prestigious media and advertising companies in the world.
+          </p>
+        </div>
+
+        <div className={`${time >= 40 ? "block" : "hidden"} w-full`}>
+          <h1 className="text-4xl uppercase font-bold mt-[180px] text-center mb-[60px]">READY FOR TAKE-OFF</h1>
+
+          <p className="font-semibold text-center animate-bounce">Enter Site</p>
         </div>
 
       </div>
     </main>
-  )
+  );
 }

@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     colors: {
       'primary': '#F15859',
+      'secondary': '#EF3F42',
       'white': '#ffffff',
       'black': '#000000'
     },
@@ -17,6 +18,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'ground': "url('/assets/images/ground.png')",
       },
       keyframes: {
         fadeIn: {
@@ -26,6 +28,21 @@ module.exports = {
           '50%': {
             opacity: "1"
           },
+        },
+
+        fadeinLogo: {
+          '0%': {
+            opacity: "0",
+          },
+          '25%': {
+            opacity: "1"
+          },
+          '75%': {
+            opacity: "1"
+          },
+          '100%': {
+            opacity: "0",
+          }
         },
         entrance: {
           '0%': {
@@ -40,9 +57,12 @@ module.exports = {
       },
       animation: {
         fadeIn: 'fadeIn 2s ease-in',
+        fadeinLogo: 'fadeinLogo 4s ease-in',
+        fadeinText: 'fadeinLogo 8s ease-in',
         entrance: 'entrance 2s ease-in',
         move: 'flex 0.7s ease-in',
       }
+
     },
     fontFamily: {
       Mont: ['Montserrat', ...defaultTheme.fontFamily.sans],

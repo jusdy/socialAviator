@@ -8,13 +8,13 @@ const Header = () => {
             </Link>
 
             <div className="flex justify-between gap-x-[37px] uppercase text-[15px] items-center font-semibold tracking-widest">
-                <Link className="text-[#000] hover:text-[#EF3F42] transition-all" href={"/home"}>home</Link>
-                <Link className="text-[#000] hover:text-[#EF3F42] transition-all" href={"/home"}>about</Link>
-                <Link className="text-[#000] hover:text-[#EF3F42] transition-all" href={"/home"}>services</Link>
-                <Link className="text-[#000] hover:text-[#EF3F42] transition-all" href={"/home"}>work</Link>
-                <Link className="text-[#000] hover:text-[#EF3F42] transition-all" href={"/home"}>contract</Link>
+                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>home</Link>
+                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>about</Link>
+                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>services</Link>
+                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>work</Link>
+                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>contract</Link>
 
-                <button className="bg-[#EF3F42] w-[200px] h-[44px] text-white uppercase tracking-widest">
+                <button className="bg-secondary w-[200px] h-[44px] text-white uppercase tracking-widest">
                     Talk To Expert
                 </button>
             </div>

@@ -1,5 +1,6 @@
 import Header from "./header";
 import Footer from "./footer";
+import { usePathname } from 'next/navigation';
 
 interface PropsType {
     children: React.ReactNode;
@@ -8,12 +9,14 @@ interface PropsType {
 const Layout = ({
     children
 }: PropsType) => {
+    const pathname = usePathname()
+    
     return (
         <>
-            <Header />
+            {pathname !== "/" && <Header />}
             <main>{children}</main>
-            <Footer />
-      </>
+            {pathname !== "/" && <Footer />}
+        </>
     )
 }
 

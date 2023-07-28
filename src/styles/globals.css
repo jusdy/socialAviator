@@ -43,6 +43,10 @@
   opacity: 1;
 }
 
+.animation-delay {
+  animation-delay: 4s;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
