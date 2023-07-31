@@ -10,10 +10,10 @@ export default function Home() {
 
   return (
     <main className="font-Mont">
-      <div className="w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white">
+      <div className="w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[150px]">
         <img
           src="/assets/images/Logo-big.png"
-          className="absolute top-[30px] left-[calc(50%-430px)] animate-fadeinLogo opacity-0 z-10"
+          className="absolute top-[30px] lg:w-[850px] w-[380px] lg:left-[calc(50%-430px)] left-[calc(50%-180px)] animate-fadeinLogo opacity-0 z-10"
         />
 
         <img
@@ -21,43 +21,43 @@ export default function Home() {
           className="w-[300px] absolute top-[calc(69%)] left-[calc(50%-153px)] "
         />
 
-        <div className={`${time >= 8 ? "hidden" : "flex"} items-center animate-fadeinLogo animation-delay opacity-0 z-10`}>
-          <div className="flex z-20 font-semibold px-[70px] ">
+        <div className={`${time >= 8 ? "hidden" : "flex"} lg:items-center items-start animate-fadeinLogo animation-delay opacity-0 z-10`}>
+          <div className="flex lg:flex-row flex-col z-20 font-semibold lg:px-[70px] px-5">
             <div>
-              <h2 className="uppercase text-3xl mb-4">Welcome on board with</h2>
-              <h1 className="uppercase font-bold 2xl:text-[260px] xl:text-[180px] 2xl:leading-[200px] xl:leading-[160px]">
+              <h2 className="uppercase lg:text-3xl text-base mb-4">Welcome on board with</h2>
+              <h1 className="uppercase font-bold 2xl:text-[260px] xl:text-[180px] text-[60px] 2xl:leading-[200px] xl:leading-[160px] leading-[60px]">
                 social aviator
               </h1>
             </div>
 
             <div className="">
-              <span className="text-2xl tracking-wider">
+              <span className="lg:text-2xl text-lg tracking-wider">
                 Your <span className="bg-primary">one-stop solution</span> for
                 all your influencer marketing objectives
               </span>
               <img
                 alt="arrow"
                 src="/assets/images/arrow.png"
-                className="pt-10"
+                className="pt-10 lg:mx-0 mx-auto"
               />
             </div>
           </div>
         </div>
 
-        <div className={`${time >= 8 && time < 12 ? "flex" : "hidden"} mt-20 ml-20 flex-col z-20 animate-fadeinLogo opacity-0`}>
-          <h2 className="uppercase font-bold text-2xl mb-6 tracking-wider">We are an influencer marketing company that provides</h2>
-          <h1 className="uppercase font-bold 2xl:text-[120px] xl:text-[80px] 2xl:leading-[100px] xl:leading-[80px] tracking-tighter">
+        <div className={`${time >= 8 && time < 12 ? "flex" : "hidden"} lg:mt-20 mt-0 lg:ml-20 ml-5 mr-5 flex-col z-20 animate-fadeinLogo opacity-0`}>
+          <h2 className="uppercase font-bold lg:text-2xl text-base mb-6 tracking-wider">We are an influencer marketing company that provides</h2>
+          <h1 className="uppercase font-bold 2xl:text-[120px] lg:text-[80px] text-4xl 2xl:leading-[100px] lg:leading-[80px] tracking-tighter">
           customized <p>brand solutions</p>
           </h1>
-          <span className="text-2xl tracking-wider uppercase mt-8 font-bold">
+          <span className="lg:text-2xl text-lg tracking-wider uppercase mt-8 font-bold">
             to help your brand <span className="bg-primary px-2">reach new heights.</span> 
           </span>
-          <p className="text-2xl tracking-wider uppercase font-bold">
+          <p className="lg:text-2xl text-lg tracking-wider uppercase font-bold">
             With our services, your brands will soar to new heights, leaving behind the ordinary and embrace the extraordinary. </p>
         </div>
 
-        <div className={`${time >= 12 && time < 20 ? "flex" : "hidden"} flex-col text-2xl animate-fadeinText text-center px-[240px] mt-40`}>
-          <h1 className="font-bold mb-[60px] uppercase">Why fly with Social Aviator?</h1>
+        <div className={`${time >= 12 && time < 20 ? "flex" : "hidden"} flex-col lg:text-2xl text-base text-center xl:px-[240px] lg:px-[140px] px-8 lg:mt-40 mt-0 animate-fadeinText`}>
+          <h1 className="font-bold mb-[60px] uppercase ">Why fly with Social Aviator?</h1>
 
           <p className="font-semibold mb-10">
             We at Social Aviator understand the importance of speed in today's

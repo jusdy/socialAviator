@@ -48,3 +48,36 @@ export const cardData = [
         subTitle: "Hello World"
     },
 ];
+
+export const cardData2 = [
+    {
+        id: 1,
+        url: "/assets/images/person1.png",
+        title: "Hello",
+        subTitle: "Hello World"
+    },
+    {
+        id: 2,
+        url: "/assets/images/person1.png",
+        title: "Hello",
+        subTitle: "Hello World"
+    },
+    {
+        id: 3,
+        url: "/assets/images/person1.png",
+        title: "Hello",
+        subTitle: "Hello World"
+    },
+    {
+        id: 4,
+        url: "/assets/images/person1.png",
+        title: "Hello",
+        subTitle: "Hello World"
+    },
+    {
+        id: 5,
+        url: "/assets/images/person1.png",
+        title: "Hello",
+        subTitle: "Hello World"
+    },
+];

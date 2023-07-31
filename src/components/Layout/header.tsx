@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="h-[130px] w-[calc(100%-171px)] ml-[94px] mr-[77px] absolute flex justify-between font-Mont items-center z-50">
-            <Link href={'/#'} className="h-full w-[132px] flex justify-center items-center">
+        <header className="h-[130px] w-[calc(100%-171px)] lg:ml-[94px] lg:mr-[77px] mx-3 absolute flex justify-between font-Mont items-center z-50">
+            <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] flex justify-center items-center">
                 <img src="assets/logo.png"/>
             </Link>
 
-            <div className="flex justify-between gap-x-[37px] uppercase text-[15px] items-center font-semibold tracking-widest">
+            <div className="lg:flex hidden justify-between gap-x-[37px] uppercase text-[15px] items-center font-semibold tracking-widest">
                 <Link className="text-black hover:text-secondary transition-all" href={"/home"}>home</Link>
                 <Link className="text-black hover:text-secondary transition-all" href={"/home"}>about</Link>
                 <Link className="text-black hover:text-secondary transition-all" href={"/home"}>services</Link>
