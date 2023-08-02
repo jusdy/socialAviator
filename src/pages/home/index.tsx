@@ -26,6 +26,7 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 80
   },
 };
 
@@ -163,7 +164,7 @@ const HomePage = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
         >
           <PhotoContainer>
-            <img src="assets/images/window1.png" className="h-full" />
+            <img src="assets/images/window1.png" className="md:h-full" />
           </PhotoContainer>
 
           <PhotoContainer>
@@ -177,37 +178,37 @@ const HomePage = () => {
       </div>
 
       <div className="mt-[90px]">
-        <div className="flex gap-x-4 justify-center mb-6">
-          <p className="text-primary text-[30px] font-semibold text-center">
+        <div className="flex md:flex-col flex-row gap-x-4 justify-center mb-6 mx-6">
+          <p className="text-primary md:text-[30px] text-lg font-semibold text-center">
             Brands Trusting Social Aviator
           </p>
-          <img src="assets/svg/heart.svg" />
+          <img className="" src="assets/svg/heart.svg" />
         </div>
 
         <Marquee>
-          {Array(20)
+          {Array(11)
             .fill("")
             .map((item, key) => (
-              <img key={key} src="/assets/images/brands.png" />
+              <img key={key} src={`/assets/images/brands${key}.png`} />
             ))}
         </Marquee>
       </div>
 
-      <div className="mt-[90px] md:mb-[150px] mb-[50px]">
-        <p className="text-primary text-[30px] font-semibold text-center mb-6">
+      <div className="mt-[90px] md:mb-[150px] mb-[50px] mx-6">
+        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mb-6">
           Choose from over 1200+ celebrities to promote your business
         </p>
 
         <ExpandingCards className="lg:flex hidden" data={cardData} />
         <ExpandingCards className="lg:hidden flex" data={cardData2} />
 
-        <p className="text-primary md:text-[30px] text-[24px] font-semibold text-center mt-20">
+        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-20">
           1000+ brands • 850 mn+ reach
         </p>
       </div>
 
       <div className="py-4 lg:px-[80px] px-[27px] bg-[#894935] grid lg:grid-cols-2 grid-cols-1 gap-x-8 items-center border-0">
-        <div className="col-span-1 grid gap-x-2 2xl:h-[165px] gap-y-2 md:grid-cols-2 grid-cols-1 text-3xl font-normal tracking-widest">
+        <div className="col-span-1 grid gap-x-2 2xl:h-[165px] gap-y-2 md:grid-cols-2 grid-cols-1 md:text-3xl text-2xl font-normal tracking-widest">
           <TextBox content="1420 BRANDS">
             <NewsTicker
               ref={ref}
@@ -217,10 +218,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>Content 1</div>
-              <div>Content 2</div>
-              <div>Content 3</div>
-              <div>Content 4</div>
+              <div>1420 BRANDS</div>
+              <div>1420 BRANDS</div>
+              <div>1420 BRANDS</div>
+              <div>1420 BRANDS</div>
             </NewsTicker>
           </TextBox>
           <TextBox content="1420 BRANDS">
@@ -232,10 +233,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>Content 1</div>
-              <div>Content 2</div>
-              <div>Content 3</div>
-              <div>Content 4</div>
+              <div>8.5 Million REACH</div>
+              <div>8.5 Million REACH</div>
+              <div>8.5 Million REACH</div>
+              <div>8.5 Million REACH</div>
             </NewsTicker>
           </TextBox>
           <TextBox content="1420 BRANDS">
@@ -247,10 +248,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>Content 1</div>
-              <div>Content 2</div>
-              <div>Content 3</div>
-              <div>Content 4</div>
+              <div>1200 CELEBRITIES</div>
+              <div>1200 CELEBRITIES</div>
+              <div>1200 CELEBRITIES</div>
+              <div>1200 CELEBRITIES</div>
             </NewsTicker>
           </TextBox>
           <TextBox content="1420 BRANDS">
@@ -262,10 +263,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>Content 1</div>
-              <div>Content 2</div>
-              <div>Content 3</div>
-              <div>Content 4</div>
+              <div>300 AD CAMPAIGNS</div>
+              <div>300 AD CAMPAIGNS</div>
+              <div>300 AD CAMPAIGNS</div>
+              <div>300 AD CAMPAIGNS</div>
             </NewsTicker>
           </TextBox>
           <TextBox content="1420 BRANDS">
@@ -277,10 +278,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>Content 1</div>
-              <div>Content 2</div>
-              <div>Content 3</div>
-              <div>Content 4</div>
+              <div>74 SPONSORED</div>
+              <div>74 SPONSORED</div>
+              <div>74 SPONSORED</div>
+              <div>74 SPONSORED</div>
             </NewsTicker>
           </TextBox>
           <TextBox content="1420 BRANDS">
@@ -292,22 +293,22 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>Content 1</div>
-              <div>Content 2</div>
-              <div>Content 3</div>
-              <div>Content 4</div>
+              <div>15 CATEGORIES</div>
+              <div>15 CATEGORIES</div>
+              <div>15 CATEGORIES</div>
+              <div>15 CATEGORIES</div>
             </NewsTicker>
           </TextBox>
         </div>
 
         <div className="col-span-1 flex gap-x-4 items-center mt-8">
           <div className="flex flex-col gap-y-6">
-            <p className="text-white font-bold md:text-[32px] text-2xl uppercase leading-10">
+            <p className="text-white font-bold md:text-[32px] text-xl uppercase leading-10">
               Your one STOP PLACE FOR CELEBRITY ENGAGEMENT
             </p>
 
             <div className="flex justify-between items-center">
-              <button className="bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest text-base">
+              <button className="bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
                 ONBOARD MY BUSINESS
               </button>
               <img
@@ -326,8 +327,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFF7D3] w-full pt-16 pb-[280px] md:px-[76px] px-6 text-3xl font-semibold">
-        <p className="text-primary mb-10">Glimpse of our work</p>
+      <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[280px] pb-[100px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
+        <p className="text-primary mb-10 md:text-left text-center">Glimpse of our work</p>
 
         <Carousel
           responsive={responsive2}
