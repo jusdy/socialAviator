@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 //@ts-ignore
 import NewsTicker, { Directions } from "react-advanced-news-ticker";
 import PhotoContainer from "@/components/photo";
@@ -10,6 +9,7 @@ import ExpandingCards from "@/components/expandingCards";
 import { cardData, cardData2 } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
+import Link from "next/link";
 
 const responsive = {
   desktop: {
@@ -178,11 +178,11 @@ const HomePage = () => {
       </div>
 
       <div className="mt-[90px]">
-        <div className="flex md:flex-col flex-row gap-x-4 justify-center mb-6 mx-6">
+        <div className="flex gap-x-4 justify-center mb-6 mx-6">
           <p className="text-primary md:text-[30px] text-lg font-semibold text-center">
             Brands Trusting Social Aviator
           </p>
-          <img className="" src="assets/svg/heart.svg" />
+          <img className="w-5" src="assets/svg/heart.svg" />
         </div>
 
         <Marquee>
@@ -336,30 +336,47 @@ const HomePage = () => {
           arrows={false}
           autoPlaySpeed={3000}
           centerMode={false}
-          className=""
           containerClass="container-padding-bottom"
-          dotListClass=""
-          draggable
-          focusOnSelect
-          infinite
-          itemClass="mb-10"
-          keyBoardControl
-          minimumTouchDrag={80}
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          autoPlay={true}
+          keyBoardControl={true}
+          transitionDuration={500}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
           showDots
+          itemClass="mb-10"
+
         >
-          <div className="bg-[#D9D9D9] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"></div>
-          <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"></div>
-          <div className="bg-[#278a91] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"></div>
-          <div className="bg-[#D9D9D9] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"></div>
-          <div className="bg-[#D9D9D9] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"></div>
-          <div className="bg-[#D9D9D9] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"></div>
+          <Link href="https://www.instagram.com/p/Cqry0RWoohX/" target="_blank" className="h-full w-full">
+            <div className="bg-[#ffee05] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/Cs7xQCqgVsN/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/Cr3KTQzonX2/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CuuWcXYPYNB/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CtbfhJPrSWH/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CtvO2gXuc5k/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CtlrU1-M_P8/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CutXpJBJG1O/?hl=en" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CZ9iN2UJjKY/?hl=en" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
+          <Link href="https://www.instagram.com/p/CZ8i-4KgVOb/" target="_blank" className="h-full w-full">
+            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
+          </Link>
         </Carousel>
       </div>
     </div>

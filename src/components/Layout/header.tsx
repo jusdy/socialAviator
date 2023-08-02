@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="h-[130px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] mx-3 absolute flex justify-between font-Mont items-center z-50">
-            <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] flex justify-center items-center">
+        <header className="h-[130px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] absolute flex justify-between font-Mont items-center z-50">
+            <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] ml-4 flex justify-center items-center">
                 <img src="assets/logo.png"/>
             </Link>
 
