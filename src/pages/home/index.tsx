@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 //@ts-ignore
 import NewsTicker, { Directions } from "react-advanced-news-ticker";
 import PhotoContainer from "@/components/photo";
@@ -9,7 +10,7 @@ import ExpandingCards from "@/components/expandingCards";
 import { cardData, cardData2 } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
-import Link from "next/link";
+import { instgramLinks } from "@/constants/instgram";
 
 const responsive = {
   desktop: {
@@ -26,7 +27,7 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
-    partialVisibilityGutter: 80
+    partialVisibilityGutter: 80,
   },
 };
 
@@ -73,7 +74,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (time >= 16) setTime(0);
-  },[time])
+  }, [time]);
 
   return (
     <div className="w-full relative font-Mont">
@@ -82,7 +83,7 @@ const HomePage = () => {
         src="/assets/images/footer-top.png"
         className="w-full absolute -bottom-1"
       />
-      <div className="relative lg:h-[100vh] h-fit bg-[#FFDA79] flex lg:flex-nowrap flex-wrap 2xl:gap-x-[230px] gap-x-[100px] overflow-x-hidden">
+      <div className="relative lg:h-[100vh] h-fit bg-gold flex lg:flex-nowrap flex-wrap 2xl:gap-x-[230px] gap-x-[100px] overflow-x-hidden">
         <img
           alt="plane"
           className="w-full absolute bottom-0 z-0"
@@ -118,21 +119,33 @@ const HomePage = () => {
             />
           </div>
 
-          <p className={`${time >= 4 ? "hidden" : "block"} text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}>
+          <p
+            className={`${
+              time >= 4 ? "hidden" : "block"
+            } text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}
+          >
             This division is dedicated to providing tailored brand solutions
             that help your brand presence reach new heights. We take the time to
             understand your unique needs and goals, and our team of experts will
             work dedicatedly to create a customized strategy that delivers
             results.
           </p>
-          <p className={`${time >= 4 && time < 8 ? "block" : "hidden"} text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}>
+          <p
+            className={`${
+              time >= 4 && time < 8 ? "block" : "hidden"
+            } text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}
+          >
             Avail our tie-ups with state-of-the-art studios across Mumbai which
             is currently the hub for KEY influencers allowing us to create
             high-quality content that is tailored to your brand's needs and
             goals. Customize your celebrity, your experience, and your location
             all at once with Social Aviator.
           </p>
-          <p className={`${time >= 8 && time < 12 ? "block" : "hidden"} text-[#050505] text-[15px] font-bold leading-7 mt-[50px] animate-fadeinLogo`}>
+          <p
+            className={`${
+              time >= 8 && time < 12 ? "block" : "hidden"
+            } text-[#050505] text-[15px] font-bold leading-7 mt-[50px] animate-fadeinLogo`}
+          >
             Production value is what adds brilliance to any campaign, this
             division handles end-to-end production via our internal team &
             external partners, we work with some of the finest Directors, DOPs,
@@ -140,7 +153,11 @@ const HomePage = () => {
             VFX, Graphics, Editing, Color Grading, Dubbing, Original Soundtrack
             creation & many more in the most cost-effective manner.
           </p>
-          <p className={`${time >= 12 && time < 16 ? "block" : "hidden"} text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}>
+          <p
+            className={`${
+              time >= 12 && time < 16 ? "block" : "hidden"
+            } text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}
+          >
             This division focuses on Small and Medium Enterprises across India
             who are new to the world of influencer marketing but still wish to
             associate with influencers/ celebs by working out a long-term
@@ -328,7 +345,9 @@ const HomePage = () => {
       </div>
 
       <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[280px] pb-[100px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
-        <p className="text-primary mb-10 md:text-left text-center">Glimpse of our work</p>
+        <p className="text-primary mb-10 md:text-left text-center">
+          Glimpse of our work
+        </p>
 
         <Carousel
           responsive={responsive2}
@@ -345,38 +364,17 @@ const HomePage = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           showDots
           itemClass="mb-10"
-
         >
-          <Link href="https://www.instagram.com/p/Cqry0RWoohX/" target="_blank" className="h-full w-full">
-            <div className="bg-[#ffee05] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/Cs7xQCqgVsN/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/Cr3KTQzonX2/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CuuWcXYPYNB/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CtbfhJPrSWH/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CtvO2gXuc5k/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CtlrU1-M_P8/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CutXpJBJG1O/?hl=en" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CZ9iN2UJjKY/?hl=en" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
-          <Link href="https://www.instagram.com/p/CZ8i-4KgVOb/" target="_blank" className="h-full w-full">
-            <div className="bg-[#884141] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]"/>
-          </Link>
+          {instgramLinks.map((item: string, key) => (
+            <Link
+              key={key}
+              href={item}
+              target="_blank"
+              className="h-full w-full"
+            >
+              <div className="bg-[#ffee05] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]" />
+            </Link>
+          ))}
         </Carousel>
       </div>
     </div>

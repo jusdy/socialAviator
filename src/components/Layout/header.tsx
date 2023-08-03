@@ -1,6 +1,10 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Header = () => {
+    const router = useRouter();
+    const pathname = router.pathname;
+
     return (
         <header className="h-[130px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] absolute flex justify-between font-Mont items-center z-50">
             <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] ml-4 flex justify-center items-center">
@@ -13,11 +17,11 @@ const Header = () => {
             </div>
 
             <div className="lg:flex hidden justify-between gap-x-[37px] uppercase text-[15px] items-center font-semibold tracking-widest">
-                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>home</Link>
-                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>about</Link>
-                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>services</Link>
-                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>work</Link>
-                <Link className="text-black hover:text-secondary transition-all" href={"/home"}>contract</Link>
+                <Link className={`${pathname === '/home' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/home"}>home</Link>
+                <Link className={`${pathname === '/about' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/about"}>about</Link>
+                <Link className={`${pathname === '/services' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/services"}>services</Link>
+                <Link className={`${pathname === '/work' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/work"}>work</Link>
+                <Link className={`${pathname === '/contract' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/contract"}>contract</Link>
 
                 <button className="bg-secondary w-[200px] h-[44px] text-white uppercase tracking-widest">
                     Talk To Expert
