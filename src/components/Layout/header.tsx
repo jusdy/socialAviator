@@ -20,8 +20,8 @@ const Header = () => {
                 <Link className={`${pathname === '/home' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/home"}>home</Link>
                 <Link className={`${pathname === '/about' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/about"}>about</Link>
                 <Link className={`${pathname === '/services' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/services"}>services</Link>
-                <Link className={`${pathname === '/work' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/work"}>work</Link>
-                <Link className={`${pathname === '/contract' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/contract"}>contract</Link>
+                <Link className={`text-secondary hover:text-secondary transition-all`} href={"/contact"}>work</Link>
+                <Link className={`${pathname === '/contact' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/contact"}>contact</Link>
 
                 <button className="bg-secondary w-[200px] h-[44px] text-white uppercase tracking-widest">
                     Talk To Expert
