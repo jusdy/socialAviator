@@ -1,26 +1,36 @@
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Header = () => {
+    const [isMenu, setMenu] = useState<boolean>(false);
     const router = useRouter();
     const pathname = router.pathname;
 
     return (
-        <header className="h-[130px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] absolute flex justify-between font-Mont items-center z-50">
+        <header className="h-[130px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] md:absolute fixed bg-gold flex justify-between font-Mont items-center z-50">
             <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] ml-4 flex justify-center items-center">
                 <img src="assets/logo.png"/>
             </Link>
 
             <div className="md:hidden flex gap-x-12 items-center">
                 <Link href={""}><img src="/assets/svg/whatsapp.svg"/></Link>
-                <Link href={""}><img src="/assets/svg/menu.svg"/></Link>
+                <Link href={""} onClick={() => setMenu(prev => !prev)}><img src="/assets/svg/menu.svg"/></Link>
+            </div>
+
+            <div className={`${!isMenu ? "-left-[calc(100%)]" : "left-0"} w-[100vw] h-[100vh] fixed top-[130px] text-xl font-extrabold bg-gold transition-all duration-300 flex flex-col pt-[120px] gap-y-10 items-center uppercase text-secondary`}>
+                <Link onClick={() => setMenu(false)} className="" href={"/home"}>home</Link>
+                <Link onClick={() => setMenu(false)} className="" href={"/about"}>about</Link>
+                <Link onClick={() => setMenu(false)} className="" href={"/services"}>services</Link>
+                <Link onClick={() => setMenu(false)} className=""href={"/services"}>work</Link>
+                <Link onClick={() => setMenu(false)} className="" href={"/contact"}>contact</Link>                
             </div>
 
             <div className="lg:flex hidden justify-between gap-x-[37px] uppercase text-[15px] items-center font-semibold tracking-widest">
                 <Link className={`${pathname === '/home' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/home"}>home</Link>
                 <Link className={`${pathname === '/about' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/about"}>about</Link>
                 <Link className={`${pathname === '/services' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/services"}>services</Link>
-                <Link className={`text-secondary hover:text-secondary transition-all`} href={"/contact"}>work</Link>
+                <Link className={`text-black hover:text-secondary transition-all`} href={"/contact"}>work</Link>
                 <Link className={`${pathname === '/contact' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/contact"}>contact</Link>
 
                 <button className="bg-secondary w-[200px] h-[44px] text-white uppercase tracking-widest">
