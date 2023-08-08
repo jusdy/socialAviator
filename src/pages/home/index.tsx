@@ -202,7 +202,9 @@ const HomePage = () => {
           <img className="w-5" src="assets/svg/heart.svg" />
         </div>
 
-        <Marquee>
+        <Marquee
+        
+        >
           {Array(11)
             .fill("")
             .map((item, key) => (
@@ -219,7 +221,7 @@ const HomePage = () => {
         <ExpandingCards className="lg:flex hidden" data={cardData} />
         <ExpandingCards className="lg:hidden flex" data={cardData2} />
 
-        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-20">
+        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-24">
           1000+ brands • 850 mn+ reach
         </p>
       </div>

@@ -8,7 +8,7 @@ const Header = () => {
     const pathname = router.pathname;
 
     return (
-        <header className="h-[130px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] md:absolute fixed bg-gold flex justify-between font-Mont items-center z-50">
+        <header className="md:h-[130px] h-[100px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] md:absolute fixed bg-gold flex justify-between font-Mont items-center z-50">
             <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] ml-4 flex justify-center items-center">
                 <img src="assets/logo.png"/>
             </Link>
@@ -18,7 +18,7 @@ const Header = () => {
                 <Link href={""} onClick={() => setMenu(prev => !prev)}><img src="/assets/svg/menu.svg"/></Link>
             </div>
 
-            <div className={`${!isMenu ? "-left-[calc(100%)]" : "left-0"} w-[100vw] h-[100vh] fixed top-[130px] text-xl font-extrabold bg-gold transition-all duration-300 flex flex-col pt-[120px] gap-y-10 items-center uppercase text-secondary`}>
+            <div className={`${!isMenu ? "-left-[calc(100%+20px)]" : "left-0"} w-[100vw] h-[100vh] fixed top-[130px] text-xl font-extrabold bg-gold transition-all duration-300 flex flex-col pt-[120px] gap-y-10 items-center uppercase text-secondary`}>
                 <Link onClick={() => setMenu(false)} className="" href={"/home"}>home</Link>
                 <Link onClick={() => setMenu(false)} className="" href={"/about"}>about</Link>
                 <Link onClick={() => setMenu(false)} className="" href={"/services"}>services</Link>
