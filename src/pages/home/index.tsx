@@ -11,25 +11,9 @@ import { cardData, cardData2 } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
 import { instgramLinks } from "@/constants/instgram";
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 2,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-    partialVisibilityGutter: 80,
-  },
-};
+import WorkItem from "@/components/WorkItem";
+import ExpandingVideo from "@/components/ExpandingVideo";
+import VideoCarousel from "@/components/VideoCarousel";
 
 const responsive2 = {
   desktop: {
@@ -64,6 +48,9 @@ const responsive2 = {
 
 const HomePage = () => {
   const ref = useRef(null);
+  const [expandedVideoText, setExpandedVideoText] = useState<string | null>(
+    null
+  );
 
   const [time, setTime] = useState(0);
   useEffect(() => {
@@ -77,7 +64,7 @@ const HomePage = () => {
   }, [time]);
 
   return (
-    <div className="w-full relative font-Mont">
+    <div className="w-full relative font-Mont bg-white">
       <img
         alt="aviator footer"
         src="/assets/images/footer-top.png"
@@ -167,31 +154,34 @@ const HomePage = () => {
           </p>
         </div>
 
-        <Carousel
-          containerClass="flex w-full justify-between 2xl:pt-[60px] lg:pt-[200px] pt-10 ml-[30px] z-10"
-          responsive={responsive}
-          partialVisible={true}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          transitionDuration={500}
-          arrows={false}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-        >
-          <PhotoContainer>
-            <img src="assets/images/window1.png" className="md:h-full" />
-          </PhotoContainer>
+        <VideoCarousel>
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+            <video
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/assets/videos/video.webm" />
+            </video>
+          </div>
 
-          <PhotoContainer>
-            <img src="assets/images/window2.png" className="h-full" />
-          </PhotoContainer>
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+            <video
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/assets/videos/video.webm" />
+            </video>
+          </div>
 
-          <PhotoContainer>
-            <img src="assets/images/window3.png" className="h-full" />
-          </PhotoContainer>
-        </Carousel>
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+            <video
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/assets/videos/video.webm" />
+            </video>
+          </div>
+        </VideoCarousel>
       </div>
 
       <div className="mt-[90px]">
@@ -202,9 +192,7 @@ const HomePage = () => {
           <img className="w-5" src="assets/svg/heart.svg" />
         </div>
 
-        <Marquee
-        
-        >
+        <Marquee>
           {Array(11)
             .fill("")
             .map((item, key) => (
@@ -218,11 +206,32 @@ const HomePage = () => {
           Choose from over 1200+ celebrities to promote your business
         </p>
 
-        <ExpandingCards className="lg:flex hidden" data={cardData} />
-        <ExpandingCards className="lg:hidden flex" data={cardData2} />
+        <div className="flex flex-wrap gap-3 w-full justify-center">
+          {Array.from([
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+          ]).map((item, index) => (
+            <ExpandingVideo
+              key={index}
+              video={item}
+              setExpandedVideoText={setExpandedVideoText}
+              text={`Video ${index + 1}`}
+            />
+          ))}
+        </div>
 
-        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-24">
-          1000+ brands • 850 mn+ reach
+        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-6">
+          {expandedVideoText
+            ? expandedVideoText
+            : "1000+ brands • 850 mn+ reach"}
         </p>
       </div>
 
@@ -357,25 +366,21 @@ const HomePage = () => {
           arrows={false}
           autoPlaySpeed={3000}
           centerMode={false}
-          containerClass="container-padding-bottom"
           ssr={true} // means to render carousel on server-side.
-          infinite={true}
           autoPlay={true}
           keyBoardControl={true}
           transitionDuration={500}
           removeArrowOnDeviceType={["tablet", "mobile"]}
           showDots
+          infinite
           itemClass="mb-10"
         >
           {instgramLinks.map((item: string, key) => (
-            <Link
-              key={key}
-              href={item}
-              target="_blank"
-              className="h-full w-full"
-            >
-              <div className="bg-[#ffee05] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]" />
-            </Link>
+            <WorkItem
+              title={`Work ${key + 1}`}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor."
+              link={item}
+            />
           ))}
         </Carousel>
       </div>
