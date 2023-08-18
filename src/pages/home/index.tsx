@@ -160,7 +160,7 @@ const HomePage = () => {
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src="/assets/videos/video.webm" />
+              <source src="/assets/videos/heading_video_1.mp4" />
             </video>
           </div>
 
@@ -169,7 +169,7 @@ const HomePage = () => {
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src="/assets/videos/video.webm" />
+              <source src="/assets/videos/heading_video_2.mp4" />
             </video>
           </div>
 
@@ -178,7 +178,7 @@ const HomePage = () => {
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src="/assets/videos/video.webm" />
+              <source src="/assets/videos/heading_video_3.mp4" />
             </video>
           </div>
         </VideoCarousel>
@@ -237,7 +237,7 @@ const HomePage = () => {
 
       <div className="py-4 lg:px-[80px] px-[27px] bg-[#894935] grid lg:grid-cols-2 grid-cols-1 gap-x-8 items-center border-0">
         <div className="col-span-1 grid gap-x-2 2xl:h-[165px] gap-y-2 md:grid-cols-2 grid-cols-1 md:text-3xl text-2xl font-normal tracking-widest">
-          <TextBox content="1420 BRANDS">
+          <TextBox content="250+ Brands">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -246,13 +246,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>1420 BRANDS</div>
-              <div>1420 BRANDS</div>
-              <div>1420 BRANDS</div>
-              <div>1420 BRANDS</div>
+              <div>250+ Brands</div>
+              <div>250+ Brands</div>
+              <div>250+ Brands</div>
+              <div>250+ Brands</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="800+ Campaigns">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -261,13 +261,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>8.5 Million REACH</div>
-              <div>8.5 Million REACH</div>
-              <div>8.5 Million REACH</div>
-              <div>8.5 Million REACH</div>
+              <div>800+ Campaigns</div>
+              <div>800+ Campaigns</div>
+              <div>800+ Campaigns</div>
+              <div>800+ Campaigns</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="5+ Platforms">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -276,13 +276,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>1200 CELEBRITIES</div>
-              <div>1200 CELEBRITIES</div>
-              <div>1200 CELEBRITIES</div>
-              <div>1200 CELEBRITIES</div>
+              <div>5+ Platforms</div>
+              <div>5+ Platforms</div>
+              <div>5+ Platforms</div>
+              <div>5+ Platforms</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="350+ Mn Reach">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -291,13 +291,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>300 AD CAMPAIGNS</div>
-              <div>300 AD CAMPAIGNS</div>
-              <div>300 AD CAMPAIGNS</div>
-              <div>300 AD CAMPAIGNS</div>
+              <div>350+ Mn Reach</div>
+              <div>350+ Mn Reach</div>
+              <div>350+ Mn Reach</div>
+              <div>350+ Mn Reach</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="150+ Mn Engagement">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -306,13 +306,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>74 SPONSORED</div>
-              <div>74 SPONSORED</div>
-              <div>74 SPONSORED</div>
-              <div>74 SPONSORED</div>
+              <div>150+ Mn Engagement</div>
+              <div>150+ Mn Engagement</div>
+              <div>150+ Mn Engagement</div>
+              <div>150+ Mn Engagement</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="1000+ Influencers">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -321,10 +321,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>15 CATEGORIES</div>
-              <div>15 CATEGORIES</div>
-              <div>15 CATEGORIES</div>
-              <div>15 CATEGORIES</div>
+              <div>1000+ Influencers</div>
+              <div>1000+ Influencers</div>
+              <div>1000+ Influencers</div>
+              <div>1000+ Influencers</div>
             </NewsTicker>
           </TextBox>
         </div>
@@ -337,7 +337,7 @@ const HomePage = () => {
 
             <div className="flex justify-between items-center">
               <button className="bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
-                ONBOARD MY BUSINESS
+                Link it to Contact us
               </button>
               <img
                 alt="aviator"
@@ -357,7 +357,7 @@ const HomePage = () => {
 
       <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[280px] pb-[100px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
         <p className="text-primary mb-10 md:text-left text-center">
-          Glimpse of our work
+          Our Casestudies
         </p>
 
         <Carousel
@@ -377,8 +377,8 @@ const HomePage = () => {
         >
           {instgramLinks.map((item: string, key) => (
             <WorkItem
-              title={`Work ${key + 1}`}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor."
+              title={`Secret Temptation`}
+              description="Campaign Objective To bring on board a suitable face for their brand especially from the south market to drive awareness & interest for the launch of its new perfume roll on."
               link={item}
             />
           ))}

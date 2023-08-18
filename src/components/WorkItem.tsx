@@ -9,7 +9,9 @@ interface Props {
 const WorkItem = ({ title, description, link }: Props) => {
   return (
     <div className="flex flex-col bg-[#1F1F1F] rounded-3xl mx-5 overflow-hidden group duration-150 hover:bg-[#333333]">
-      <div className="h-[400px] bg-gold"></div>
+      <div className="relative h-[400px] overflow-hidden">
+        <img className="object-cover" src="/assets/images/sec1.jpg" alt="" />
+      </div>
       <div className="flex flex-col gap-4 p-5">
         <h3 className="text-2xl font-bold">{title}</h3>
         <p className="text-lg">{description}</p>

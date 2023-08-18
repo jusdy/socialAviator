@@ -25,11 +25,15 @@ interface Props {
 }
 
 const VideoCarousel = ({ children }: Props) => {
+  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
   const carouselRef = React.useRef(null);
 
   // the infinite and rewind properties of the carousel always cause some kind of problem with this callback :/
   const afterChangeCallback = useCallback(
     (previousSlide: number, { currentSlide }: { currentSlide: number }) => {
+      if (currentSlide === currentSlideIndex) return;
+      setCurrentSlideIndex(currentSlide);
+
       const containerRef = carouselRef.current.containerRef.current;
       let videoElement: HTMLVideoElement | null;
       if (!containerRef) return;
@@ -52,7 +56,7 @@ const VideoCarousel = ({ children }: Props) => {
         videoElement.play();
       }
     },
-    []
+    [currentSlideIndex]
   );
 
   useEffect(() => {

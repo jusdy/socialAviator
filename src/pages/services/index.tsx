@@ -1,4 +1,5 @@
 import { expectation } from "@/constants";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const Services = () => {
   return (
@@ -30,90 +31,110 @@ const Services = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 grid-cols-1">
-        <div className="col-span-1 bg-secondary flex flex-col items-left justify-center lg:pl-24 pl-8 pr-8 lg:py-0 py-10">
-          <h1 className="uppercase lg:text-4xl text-2xl text-txtGold font-extrabold mb-8">Social Labs</h1>
+        <div className="col-span-2 flex justify-center">
+          <Tabs className="w-full my-4 xl:px-20 lg:px-12 px-6">
+            <TabList className="flex gap-10 justify-around my-5">
+              <Tab className="cursor-pointer border-b-2 hover:bg-white/[.3] p-2 w-full text-center">
+                SOCIAL LABS
+              </Tab>
+              <Tab className="cursor-pointer border-b-2 hover:bg-white/[.3] p-2 w-full text-center">
+                SOCIAL SETS
+              </Tab>
+              <Tab className="cursor-pointer border-b-2 hover:bg-white/[.3] p-2 w-full text-center">
+                SOCIAL PRODUCTION
+              </Tab>
+              <Tab className="cursor-pointer border-b-2 hover:bg-white/[.3] p-2 w-full text-center">
+                SOCIAL BIZ
+              </Tab>
+            </TabList>
 
-          <span className="text-white lg:text-lg text-base">
-            Campaign Planning
-            <br></br>
-            Creative Strategy
-            <br></br>
-            Collaboration with Leading Influencers/ Celebrities
-            <br></br>
-            Post Campaign Report
-            <br></br>
-            Script Writing Support
-            <br></br>
-            Absolute execution support
-            <br></br>
-            Quick turnaround time
-          </span>
-        </div>
-        <div className="col-span-1 lg:block hidden">
-          <img className="w-full" src="/assets/images/service1.png"/>
-        </div>
+            <TabPanel className="flex justify-center">
+              <div className="col-span-2 bg-white/[.2] flex flex-col items-left justify-center w-full xl:w-3/4 min-w-fit rounded-xl p-6">
+                <h1 className="uppercase lg:text-4xl text-2xl text-txtGold font-extrabold mb-8">
+                  Social Labs
+                </h1>
 
-        <div className="col-span-1 lg:block hidden">
-          <img className="w-full" src="/assets/images/service1.png"/>
-        </div>
-        <div className="col-span-1 bg-black flex flex-col items-left justify-center lg:pl-24 pl-8 pr-8 lg:py-0 py-10">
-          <h1 className="uppercase lg:text-4xl text-2xl text-secondary font-extrabold mb-8">Social Sets</h1>
+                <span className="text-white lg:text-lg text-base">
+                  Campaign Planning
+                  <br></br>
+                  Creative Strategy
+                  <br></br>
+                  Collaboration with Leading Influencers/ Celebrities
+                  <br></br>
+                  Post Campaign Report
+                  <br></br>
+                  Script Writing Support
+                  <br></br>
+                  Absolute execution support
+                  <br></br>
+                  Quick turnaround time
+                </span>
+              </div>
+            </TabPanel>
+            <TabPanel className="flex justify-center">
+              <div className="col-span-2 bg-white/[.2] flex flex-col items-left justify-center w-full xl:w-3/4 min-w-fit rounded-xl p-6">
+                <h1 className="uppercase lg:text-4xl text-2xl text-secondary font-extrabold mb-8">
+                  Social Sets
+                </h1>
 
-          <span className="text-white lg:text-lg text-base">
-            Access to existing venues
-            <br></br>
-            Saves you cost & time for art setup
-            <br></br>
-            Options to choose from
-            <br></br>
-            Helps enhance to production value
-            <br></br>
-            Helps you think of a better creative approach
-            <br></br>
-            Most cost-effective pricing
-            <br></br>
-            Reduces efforts for coordination with multiple vendors
-          </span>
-        </div>
+                <span className="text-white lg:text-lg text-base">
+                  Access to existing venues
+                  <br></br>
+                  Saves you cost & time for art setup
+                  <br></br>
+                  Options to choose from
+                  <br></br>
+                  Helps enhance to production value
+                  <br></br>
+                  Helps you think of a better creative approach
+                  <br></br>
+                  Most cost-effective pricing
+                  <br></br>
+                  Reduces efforts for coordination with multiple vendors
+                </span>
+              </div>
+            </TabPanel>
+            <TabPanel className="flex justify-center">
+              <div className="col-span-2 bg-white/[.2] flex flex-col items-left justify-center w-full xl:w-3/4 min-w-fit rounded-xl p-6">
+                <h1 className="uppercase lg:text-4xl text-2xl text-txtGold font-extrabold mb-8">
+                  Social Production
+                </h1>
 
-        <div className="col-span-1 bg-secondary flex flex-col items-left justify-center lg:pl-24 pl-8 pr-8 lg:py-0 py-10">
-          <h1 className="uppercase lg:text-4xl text-2xl text-txtGold font-extrabold mb-8">Social Production</h1>
+                <span className="text-white lg:text-lg text-base">
+                  Quality equipment for shooting purposes
+                  <br></br>
+                  Best of behind-the-camera crew
+                  <br></br>
+                  Most suitable casting for support cast
+                  <br></br>
+                  End-to-end production support for video & audio creation
+                  <br></br>
+                  End-to-end postproduction support
+                  <br></br>
+                  Most cost-effective pricing
+                  <br></br>
+                  Quick turnaround time
+                </span>
+              </div>
+            </TabPanel>
+            <TabPanel className="flex justify-center">
+              <div className="col-span-2 bg-white/[.2] flex flex-col items-left justify-center w-full xl:w-3/4 min-w-fit rounded-xl p-6">
+                <h1 className="uppercase lg:text-4xl text-2xl text-secondary font-extrabold mb-8">
+                  Social Biz
+                </h1>
 
-          <span className="text-white lg:text-lg text-base">
-            Quality equipment for shooting purposes
-            <br></br>
-            Best of behind-the-camera crew
-            <br></br>
-            Most suitable casting for support cast
-            <br></br>
-            End-to-end production support for video & audio creation
-            <br></br>
-            End-to-end postproduction support
-            <br></br>
-            Most cost-effective pricing
-            <br></br>
-            Quick turnaround time
-          </span>
-        </div>
-        <div className="col-span-1 lg:block hidden">
-          <img className="w-full" src="/assets/images/service3.png"/>
-        </div>
-
-        <div className="col-span-1 lg:block hidden">
-          <img className="w-full" src="/assets/images/service4.png"/>
-        </div>
-        <div className="col-span-1 bg-black flex flex-col items-left justify-center lg:pl-24 pl-8 pr-8 lg:py-0 py-10">
-          <h1 className="uppercase lg:text-4xl text-2xl text-secondary font-extrabold mb-8">Social Biz</h1>
-
-          <span className="text-white lg:text-lg text-base">
-            Supporting SMEs across India
-            <br></br>
-            Creative Campaign Planning with Celebs
-            <br></br>
-            Partnering with celebs for long-term gains
-            <br></br>
-            Working together on business plans & innovations
-          </span>
+                <span className="text-white lg:text-lg text-base">
+                  Supporting SMEs across India
+                  <br></br>
+                  Creative Campaign Planning with Celebs
+                  <br></br>
+                  Partnering with celebs for long-term gains
+                  <br></br>
+                  Working together on business plans & innovations
+                </span>
+              </div>
+            </TabPanel>
+          </Tabs>
         </div>
       </div>
 
@@ -125,19 +146,22 @@ const Services = () => {
         <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
           {expectation.map((item, key) => (
             <div>
-              <img src={"/assets/svg/" + item.icon + ".svg"}/>
+              <img src={"/assets/svg/" + item.icon + ".svg"} />
 
-              <h1 className="lg:text-lg text-base font-bold mt-6">{item.subTitle}</h1>
+              <h1 className="lg:text-lg text-base font-bold mt-6">
+                {item.subTitle}
+              </h1>
               <p className="lg:text-lg text-base">{item.description}</p>
             </div>
-          ))
-          }
+          ))}
         </div>
 
         <div className="mt-40 flex flex-col lg:items-start items-center">
-          <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">Ready to take your brand to greater heights?</p>
+          <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
+            Ready to take your brand to greater heights?
+          </p>
           <button className="bg-secondary mt-6 w-[200px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
-              get in touch
+            get in touch
           </button>
         </div>
       </div>
