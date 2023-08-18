@@ -34,7 +34,7 @@ const VideoCarousel = ({ children }: Props) => {
       if (currentSlide === currentSlideIndex) return;
       setCurrentSlideIndex(currentSlide);
 
-      const containerRef = carouselRef.current.containerRef.current;
+      const containerRef = (carouselRef.current as any).containerRef.current;
       let videoElement: HTMLVideoElement | null;
       if (!containerRef) return;
       const slides = containerRef.querySelectorAll(
@@ -61,7 +61,7 @@ const VideoCarousel = ({ children }: Props) => {
 
   useEffect(() => {
     if (!carouselRef.current) return;
-    const containerRef = carouselRef.current.containerRef.current;
+    const containerRef: any = (carouselRef?.current as any).containerRef.current;
     if (!containerRef) return;
     const activeSlide = containerRef.querySelector(
       ".react-multi-carousel-item--active"
