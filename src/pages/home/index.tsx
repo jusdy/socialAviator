@@ -89,16 +89,16 @@ const HomePage = () => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Social Labs")
+                  .typeString("Influencer Marketing")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Social Sets")
+                  .typeString("Creative Ad - Films")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Social Production")
+                  .typeString("Artificial Intelligence")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Social Biz")
+                  .typeString("Celebrity Ventures")
                   .pauseFor(1000)
                   .deleteAll()
                   .start();
@@ -106,7 +106,16 @@ const HomePage = () => {
             />
           </div>
 
-          <p
+          <p className="text-[#050505] md:text-[15px] text-xs font-bold md:leading-7 leading-5 mt-[50px]">
+            Social Aviator is not just an influencer marketer but a holistic
+            solutions platform that helps your brand’s growth by conceptualising
+            and executing tailored content-led strategies that help you connect
+            better with your target audience. With a dynamic trio of innovative
+            avenues – Social Brand Labs, Social Artificial Intelligence, Machine
+            Learning & Social Ventures – we craft your brand's journey towards
+            excellence, distinction, and prominence.
+          </p>
+          {/* <p
             className={`${
               time >= 4 ? "hidden" : "block"
             } text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}
@@ -151,7 +160,7 @@ const HomePage = () => {
             business association without having to pay anything upfront. We
             design a business plan which is a win-win for all parties associated
             by connecting businesses to relevant influencers/celebs.
-          </p>
+          </p> */}
         </div>
 
         <VideoCarousel>
@@ -360,29 +369,17 @@ const HomePage = () => {
           Our Casestudies
         </p>
 
-        <Carousel
-          responsive={responsive2}
-          additionalTransfrom={0}
-          arrows={false}
-          autoPlaySpeed={3000}
-          centerMode={false}
-          ssr={true} // means to render carousel on server-side.
-          autoPlay={true}
-          keyBoardControl={true}
-          transitionDuration={500}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          showDots
-          infinite
-          itemClass="mb-10"
-        >
+        <div className="grid grid-cols-3 gap-y-8">
           {instgramLinks.map((item: string, key) => (
             <WorkItem
+              key={key}
+              className="lg:col-span-1 col-span-3"
               title={`Secret Temptation`}
               description="Campaign Objective To bring on board a suitable face for their brand especially from the south market to drive awareness & interest for the launch of its new perfume roll on."
               link={item}
             />
           ))}
-        </Carousel>
+        </div>
       </div>
     </div>
   );

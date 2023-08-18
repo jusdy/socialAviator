@@ -111,11 +111,14 @@ export default function Home() {
           className={`${time >= 20 ? "block" : "hidden"} w-full z-10`}
           onClick={() => setPlay(true)}
         >
-          <h1 className="md:text-4xl text-2xl uppercase font-bold md:mt-[180px] mt-[80px] text-center mb-[60px]">
-            READY FOR TAKE-OFF
-          </h1>
+          {!play &&<>
+            <h1 className="md:text-4xl text-2xl uppercase font-bold md:mt-[180px] mt-[80px] text-center mb-[60px]">
+              READY FOR TAKE-OFF
+            </h1>
 
-          <p className="font-semibold text-center animate-bounce">Enter Site</p>
+            <p className="font-semibold text-center animate-bounce">Enter Site</p>
+          </>
+          }
         </div>
         {play && (
           <div className="absolute top-0 left-0 w-full h-full">
