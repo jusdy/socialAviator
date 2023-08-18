@@ -1,4 +1,5 @@
 import { teamInfo } from "@/constants/team";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -33,7 +34,7 @@ const About = () => {
 
         <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10">
             {teamInfo.map((item, key) => (
-            <div className="col-span-1">
+            <div className="col-span-1" key={key}>
                 <img className="rounded-md w-full" src="/assets/images/team1.png" />
 
                 <p className="text-primary text-center text-2xl font-bold mt-10">{item.name}</p>
@@ -43,11 +44,11 @@ const About = () => {
             ))}
         </div>
 
-        <div className="mt-40 flex flex-col lg:items-start items-center">
+        <div className="relative mt-40 flex flex-col lg:items-start items-center">
             <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">Ready to take your brand to greater heights?</p>
-            <button className="bg-secondary mt-6 w-[200px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
-                get in touch
-            </button>
+            <Link href={"/contact"} className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm">
+              get in touch
+            </Link>
         </div>
       </div>
     </div>

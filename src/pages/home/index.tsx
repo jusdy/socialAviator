@@ -11,25 +11,9 @@ import { cardData, cardData2 } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
 import { instgramLinks } from "@/constants/instgram";
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 2,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-    partialVisibilityGutter: 80,
-  },
-};
+import WorkItem from "@/components/WorkItem";
+import ExpandingVideo from "@/components/ExpandingVideo";
+import VideoCarousel from "@/components/VideoCarousel";
 
 const responsive2 = {
   desktop: {
@@ -64,6 +48,9 @@ const responsive2 = {
 
 const HomePage = () => {
   const ref = useRef(null);
+  const [expandedVideoText, setExpandedVideoText] = useState<string | null>(
+    null
+  );
 
   const [time, setTime] = useState(0);
   useEffect(() => {
@@ -77,7 +64,7 @@ const HomePage = () => {
   }, [time]);
 
   return (
-    <div className="w-full relative font-Mont">
+    <div className="w-full relative font-Mont bg-white">
       <img
         alt="aviator footer"
         src="/assets/images/footer-top.png"
@@ -102,16 +89,16 @@ const HomePage = () => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Social Labs")
+                  .typeString("Influencer Marketing")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Social Sets")
+                  .typeString("Creative Ad - Films")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Social Production")
+                  .typeString("Artificial Intelligence")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Social Biz")
+                  .typeString("Celebrity Ventures")
                   .pauseFor(1000)
                   .deleteAll()
                   .start();
@@ -119,7 +106,16 @@ const HomePage = () => {
             />
           </div>
 
-          <p
+          <p className="text-[#050505] md:text-[15px] text-xs font-bold md:leading-7 leading-5 mt-[50px]">
+            Social Aviator is not just an influencer marketer but a holistic
+            solutions platform that helps your brand’s growth by conceptualising
+            and executing tailored content-led strategies that help you connect
+            better with your target audience. With a dynamic trio of innovative
+            avenues – Social Brand Labs, Social Artificial Intelligence, Machine
+            Learning & Social Ventures – we craft your brand's journey towards
+            excellence, distinction, and prominence.
+          </p>
+          {/* <p
             className={`${
               time >= 4 ? "hidden" : "block"
             } text-[#050505] text-[15px] font-bold  leading-7 mt-[50px] animate-fadeinLogo`}
@@ -164,34 +160,37 @@ const HomePage = () => {
             business association without having to pay anything upfront. We
             design a business plan which is a win-win for all parties associated
             by connecting businesses to relevant influencers/celebs.
-          </p>
+          </p> */}
         </div>
 
-        <Carousel
-          containerClass="flex w-full justify-between 2xl:pt-[60px] lg:pt-[200px] pt-10 ml-[30px] z-10"
-          responsive={responsive}
-          partialVisible={true}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          transitionDuration={500}
-          arrows={false}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-        >
-          <PhotoContainer>
-            <img src="assets/images/window1.png" className="md:h-full" />
-          </PhotoContainer>
+        <VideoCarousel>
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+            <video
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/assets/videos/heading_video_1.mp4" />
+            </video>
+          </div>
 
-          <PhotoContainer>
-            <img src="assets/images/window2.png" className="h-full" />
-          </PhotoContainer>
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+            <video
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/assets/videos/heading_video_2.mp4" />
+            </video>
+          </div>
 
-          <PhotoContainer>
-            <img src="assets/images/window3.png" className="h-full" />
-          </PhotoContainer>
-        </Carousel>
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+            <video
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/assets/videos/heading_video_3.mp4" />
+            </video>
+          </div>
+        </VideoCarousel>
       </div>
 
       <div className="mt-[90px]">
@@ -202,9 +201,7 @@ const HomePage = () => {
           <img className="w-5" src="assets/svg/heart.svg" />
         </div>
 
-        <Marquee
-        
-        >
+        <Marquee>
           {Array(11)
             .fill("")
             .map((item, key) => (
@@ -218,17 +215,38 @@ const HomePage = () => {
           Choose from over 1200+ celebrities to promote your business
         </p>
 
-        <ExpandingCards className="lg:flex hidden" data={cardData} />
-        <ExpandingCards className="lg:hidden flex" data={cardData2} />
+        <div className="flex flex-wrap gap-3 w-full justify-center">
+          {Array.from([
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+            "/assets/videos/videoplayback.mp4",
+            "/assets/videos/video.webm",
+          ]).map((item, index) => (
+            <ExpandingVideo
+              key={index}
+              video={item}
+              setExpandedVideoText={setExpandedVideoText}
+              text={`Video ${index + 1}`}
+            />
+          ))}
+        </div>
 
-        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-24">
-          1000+ brands • 850 mn+ reach
+        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-6">
+          {expandedVideoText
+            ? expandedVideoText
+            : "1000+ brands • 850 mn+ reach"}
         </p>
       </div>
 
       <div className="py-4 lg:px-[80px] px-[27px] bg-[#894935] grid lg:grid-cols-2 grid-cols-1 gap-x-8 items-center border-0">
         <div className="col-span-1 grid gap-x-2 2xl:h-[165px] gap-y-2 md:grid-cols-2 grid-cols-1 md:text-3xl text-2xl font-normal tracking-widest">
-          <TextBox content="1420 BRANDS">
+          <TextBox content="250+ Brands">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -237,13 +255,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>1420 BRANDS</div>
-              <div>1420 BRANDS</div>
-              <div>1420 BRANDS</div>
-              <div>1420 BRANDS</div>
+              <div>250+ Brands</div>
+              <div>250+ Brands</div>
+              <div>250+ Brands</div>
+              <div>250+ Brands</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="800+ Campaigns">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -252,13 +270,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>8.5 Million REACH</div>
-              <div>8.5 Million REACH</div>
-              <div>8.5 Million REACH</div>
-              <div>8.5 Million REACH</div>
+              <div>800+ Campaigns</div>
+              <div>800+ Campaigns</div>
+              <div>800+ Campaigns</div>
+              <div>800+ Campaigns</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="5+ Platforms">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -267,13 +285,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>1200 CELEBRITIES</div>
-              <div>1200 CELEBRITIES</div>
-              <div>1200 CELEBRITIES</div>
-              <div>1200 CELEBRITIES</div>
+              <div>5+ Platforms</div>
+              <div>5+ Platforms</div>
+              <div>5+ Platforms</div>
+              <div>5+ Platforms</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="350+ Mn Reach">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -282,13 +300,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>300 AD CAMPAIGNS</div>
-              <div>300 AD CAMPAIGNS</div>
-              <div>300 AD CAMPAIGNS</div>
-              <div>300 AD CAMPAIGNS</div>
+              <div>350+ Mn Reach</div>
+              <div>350+ Mn Reach</div>
+              <div>350+ Mn Reach</div>
+              <div>350+ Mn Reach</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="150+ Mn Engagement">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -297,13 +315,13 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>74 SPONSORED</div>
-              <div>74 SPONSORED</div>
-              <div>74 SPONSORED</div>
-              <div>74 SPONSORED</div>
+              <div>150+ Mn Engagement</div>
+              <div>150+ Mn Engagement</div>
+              <div>150+ Mn Engagement</div>
+              <div>150+ Mn Engagement</div>
             </NewsTicker>
           </TextBox>
-          <TextBox content="1420 BRANDS">
+          <TextBox content="1000+ Influencers">
             <NewsTicker
               ref={ref}
               id="nt-example1"
@@ -312,10 +330,10 @@ const HomePage = () => {
               maxRows={1}
               duration={4000}
             >
-              <div>15 CATEGORIES</div>
-              <div>15 CATEGORIES</div>
-              <div>15 CATEGORIES</div>
-              <div>15 CATEGORIES</div>
+              <div>1000+ Influencers</div>
+              <div>1000+ Influencers</div>
+              <div>1000+ Influencers</div>
+              <div>1000+ Influencers</div>
             </NewsTicker>
           </TextBox>
         </div>
@@ -328,7 +346,7 @@ const HomePage = () => {
 
             <div className="flex justify-between items-center">
               <button className="bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
-                ONBOARD MY BUSINESS
+                Link it to Contact us
               </button>
               <img
                 alt="aviator"
@@ -348,36 +366,20 @@ const HomePage = () => {
 
       <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[280px] pb-[100px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
         <p className="text-primary mb-10 md:text-left text-center">
-          Glimpse of our work
+          Our Casestudies
         </p>
 
-        <Carousel
-          responsive={responsive2}
-          additionalTransfrom={0}
-          arrows={false}
-          autoPlaySpeed={3000}
-          centerMode={false}
-          containerClass="container-padding-bottom"
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          autoPlay={true}
-          keyBoardControl={true}
-          transitionDuration={500}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          showDots
-          itemClass="mb-10"
-        >
+        <div className="grid grid-cols-3 gap-y-8">
           {instgramLinks.map((item: string, key) => (
-            <Link
+            <WorkItem
               key={key}
-              href={item}
-              target="_blank"
-              className="h-full w-full"
-            >
-              <div className="bg-[#ffee05] 2xl:w-[330px] xl:w-[350px] lg:w-[290px] md:w-[300px] w-full h-[667px] rounded-[20px]" />
-            </Link>
+              className="lg:col-span-1 col-span-3"
+              title={`Secret Temptation`}
+              description="Campaign Objective To bring on board a suitable face for their brand especially from the south market to drive awareness & interest for the launch of its new perfume roll on."
+              link={item}
+            />
           ))}
-        </Carousel>
+        </div>
       </div>
     </div>
   );
