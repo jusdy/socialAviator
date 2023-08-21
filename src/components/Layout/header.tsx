@@ -8,7 +8,7 @@ const Header = () => {
     const pathname = router.pathname;
 
     return (
-        <header className="md:h-[130px] h-[100px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] md:absolute fixed bg-gold flex justify-between font-Mont items-center z-50">
+        <header className="md:h-[130px] h-[100px] w-full lg:pl-[94px] lg:pr-[77px] pr-[30px] fixed bg-gold flex justify-between font-Mont items-center z-50">
             <Link href={'/#'} className="h-full lg:w-[132px] w-[83px] min-w-[83px] ml-4 flex justify-center items-center">
                 <img src="assets/logo.png"/>
             </Link>

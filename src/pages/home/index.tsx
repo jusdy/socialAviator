@@ -164,32 +164,17 @@ const HomePage = () => {
         </div>
 
         <VideoCarousel>
-          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
+          {Array(3).fill("").map((item, key) => 
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] rounded-3xl">
             <video
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src="/assets/videos/heading_video_1.mp4" />
+              <source src={"/assets/videos/heading_video_" + (key + 1) + ".mp4"} />
             </video>
           </div>
+          )}
 
-          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
-            <video
-              muted
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            >
-              <source src="/assets/videos/heading_video_2.mp4" />
-            </video>
-          </div>
-
-          <div className="relative flex justify-center items-center overflow-hidden w-[400px] h-[500px]">
-            <video
-              muted
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            >
-              <source src="/assets/videos/heading_video_3.mp4" />
-            </video>
-          </div>
         </VideoCarousel>
       </div>
 
@@ -202,7 +187,7 @@ const HomePage = () => {
         </div>
 
         <Marquee>
-          {Array(11)
+          {Array(21)
             .fill("")
             .map((item, key) => (
               <img key={key} src={`/assets/images/brands${key}.png`} />
