@@ -78,7 +78,7 @@ const VideoCarousel = ({ children }: Props) => {
   return (
     <Carousel
       ref={carouselRef}
-      containerClass="flex gap-2 w-full 2xl:pt-[60px] lg:pt-[200px] pt-10 z-10 mx-12"
+      containerClass="flex gap-2 w-full 2xl:pt-[60px] lg:pt-[200px] pt-10 z-10 md:mx-12 mx-4"
       itemClass="flex justify-center opacity-40"
       rewind={true}
       afterChange={afterChangeCallback}

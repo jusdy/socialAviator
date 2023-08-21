@@ -76,7 +76,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div
+        {/* <div
           className={`${
             time >= 12 && time < 20 ? "flex" : "hidden"
           } flex-col lg:text-2xl text-base text-center xl:px-[240px] lg:px-[140px] px-8 lg:mt-40 mt-0 animate-fadeinText`}
@@ -105,10 +105,10 @@ export default function Home() {
             Our team consists of individuals with vast experience from some of
             the most prestigious media and advertising companies in the world.
           </p>
-        </div>
+        </div> */}
 
         <div
-          className={`${time >= 20 ? "block" : "hidden"} w-full z-10`}
+          className={`${time >= 12 ? "block" : "hidden"} w-full z-10`}
           onClick={() => setPlay(true)}
         >
           {!play &&<>
