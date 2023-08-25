@@ -35,7 +35,7 @@ const About = () => {
         <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10">
             {teamInfo.map((item, key) => (
             <div className="col-span-1" key={key}>
-                <img className="rounded-md w-full" src="/assets/images/team1.png" />
+                <img className="rounded-md w-full" src="/assets/images/Logo-big.png" />
 
                 <p className="text-primary text-center text-2xl font-bold mt-10">{item.name}</p>
                 <p className="text-center text-base">{item.role}</p>

@@ -32,7 +32,7 @@ const ExpandingVideo = ({ video, text, setExpandedVideoText }: Props) => {
     <div
       className="relative flex justify-center items-center h-[300px] overflow-hidden duration-500 ease-in-out cursor-pointer rounded-3xl"
       style={{
-        width: expanded ? "200px" : "100px",
+        width: expanded ? "250px" : "150px",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
