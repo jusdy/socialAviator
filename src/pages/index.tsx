@@ -13,12 +13,12 @@ export default function Home() {
 
   return (
     <main className="font-Mont">
-      <div className="w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[100px]">
+      <div className={`${time >= 12 ? "cursor-pointer" : ""} w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[100px]`}>
         <img
           src="/assets/images/Logo-big.png"
           className={`${
             time >= 8 ? "hidden" : "flex"
-          } absolute top-[30px] lg:w-[850px] w-[380px] lg:left-[calc(50%-430px)] left-[calc(50%-188px)] animate-fadeinLogo opacity-0 z-10`}
+          } absolute top-[80px] lg:w-[850px] w-[380px] lg:left-[calc(50%-430px)] left-[calc(50%-188px)] animate-fadeinLogo opacity-0 z-10`}
         />
 
         <img

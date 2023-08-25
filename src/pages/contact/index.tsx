@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import Input from "@/components/Input";
 
 const Contact = () => {
@@ -30,27 +31,20 @@ const Contact = () => {
       </div>
 
       <div className="lg:px-24 px-8 lg:pb-[200px] pb-[140px]">
-        <img className="w-full" src="/assets/images/border.png"/>
+        <img className="w-full" src="/assets/images/border.png" />
         <div className="bg-[#FFF7D3] pt-16 lg:px-32 px-10 pb-[120px]">
           <div className="flex justify-between items-center">
             <h1 className="text-primary font-bold lg:text-3xl text-xl">
               Let's get to work
             </h1>
 
-            <img className="lg:w-[135px] w-20" src="/assets/images/logoicon.png"/>
+            <img
+              className="lg:w-[135px] w-20"
+              src="/assets/images/logoicon.png"
+            />
           </div>
 
-          <div className="grid xl:grid-cols-3 lg:grid-cols-2 2xl:gap-x-[200px] xl:gap-x-[50px] lg:gap-x-[120px] lg:gap-y-12 gap-y-8 mt-20">
-            <Input className="col-span-1" title="Name" />
-            <Input className="col-span-1" title="Email" />
-            <Input className="col-span-1" title="Mobile" />
-            <Input className="col-span-1" title="Company/Brand Website" />
-            <Input className="col-span-1" title="City" />
-          </div>
-
-          <button className="bg-secondary mt-20 w-[200px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
-            Submit
-          </button>
+          <ContactForm />
         </div>
       </div>
     </div>
