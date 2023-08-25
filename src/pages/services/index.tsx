@@ -148,7 +148,7 @@ const Services = () => {
 
       <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
         <p className="text-primary lg:text-3xl text-xl font-bold">
-          What can you expect on the Social Aviator Tarmac?
+          Our Standard Operating Processes  
         </p>
 
         <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
