@@ -7,7 +7,7 @@ import TextBox from "@/components/TextBox";
 import Carousel from "react-multi-carousel";
 import Marquee from "react-fast-marquee";
 import ExpandingCards from "@/components/expandingCards";
-import { cardData, cardData2 } from "@/constants";
+import { cardData, cardData2, caseStudies, tickerBoard, expectation } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
 import { instgramLinks } from "@/constants/instgram";
@@ -82,7 +82,7 @@ const HomePage = () => {
           </p>
 
           {/* <p className='text-secondary lg:text-[84px] text-[40px] font-bold uppercase md:leading-[75px] leading-[50px] tracking-tighter animate-entrance'>social production</p> */}
-          <div className="text-4xl text-secondary lg:text-[84px] text-[40px] font-bold uppercase md:leading-[75px] leading-[50px] tracking-tighter">
+          <div className="text-4xl md:h-[150px] h-[100px] text-secondary lg:text-[84px] text-[40px] font-bold uppercase md:leading-[75px] leading-[50px] tracking-tighter">
             <Typewriter
               options={{
                 loop: true,
@@ -222,105 +222,35 @@ const HomePage = () => {
           ))}
         </div>
 
-        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mt-6">
+        <p className="text-primary md:text-[30px] h-[20px] text-xl font-semibold text-center mt-6">
           {expandedVideoText
             ? expandedVideoText
-            : "1000+ brands • 850 mn+ reach"}
+            : ""}
         </p>
       </div>
 
       <div className="py-4 lg:px-[80px] px-[27px] bg-[#894935] grid lg:grid-cols-2 grid-cols-1 gap-x-8 items-center border-0">
         <div className="col-span-1 grid gap-x-2 2xl:h-[165px] gap-y-2 md:grid-cols-2 grid-cols-1 md:text-3xl text-2xl font-normal tracking-widest">
-          <TextBox content="250+ Brands">
-            <NewsTicker
-              ref={ref}
-              id="nt-example1"
-              direction={Directions.UP}
-              rowHeight={30}
-              maxRows={1}
-              duration={4000}
-            >
-              <div>250+ Brands</div>
-              <div>250+ Brands</div>
-              <div>250+ Brands</div>
-              <div>250+ Brands</div>
-            </NewsTicker>
-          </TextBox>
-          <TextBox content="800+ Campaigns">
-            <NewsTicker
-              ref={ref}
-              id="nt-example1"
-              direction={Directions.UP}
-              rowHeight={30}
-              maxRows={1}
-              duration={4000}
-            >
-              <div>800+ Campaigns</div>
-              <div>800+ Campaigns</div>
-              <div>800+ Campaigns</div>
-              <div>800+ Campaigns</div>
-            </NewsTicker>
-          </TextBox>
-          <TextBox content="5+ Platforms">
-            <NewsTicker
-              ref={ref}
-              id="nt-example1"
-              direction={Directions.UP}
-              rowHeight={30}
-              maxRows={1}
-              duration={4000}
-            >
-              <div>5+ Platforms</div>
-              <div>5+ Platforms</div>
-              <div>5+ Platforms</div>
-              <div>5+ Platforms</div>
-            </NewsTicker>
-          </TextBox>
-          <TextBox content="350+ Mn Reach">
-            <NewsTicker
-              ref={ref}
-              id="nt-example1"
-              direction={Directions.UP}
-              rowHeight={30}
-              maxRows={1}
-              duration={4000}
-            >
-              <div>350+ Mn Reach</div>
-              <div>350+ Mn Reach</div>
-              <div>350+ Mn Reach</div>
-              <div>350+ Mn Reach</div>
-            </NewsTicker>
-          </TextBox>
-          <TextBox content="150+ Mn Engagement">
-            <NewsTicker
-              ref={ref}
-              id="nt-example1"
-              direction={Directions.UP}
-              rowHeight={30}
-              maxRows={1}
-              duration={4000}
-            >
-              <div>150+ Mn Engagement</div>
-              <div>150+ Mn Engagement</div>
-              <div>150+ Mn Engagement</div>
-              <div>150+ Mn Engagement</div>
-            </NewsTicker>
-          </TextBox>
-          <TextBox content="1000+ Influencers">
-            <NewsTicker
-              ref={ref}
-              id="nt-example1"
-              direction={Directions.UP}
-              rowHeight={30}
-              maxRows={1}
-              duration={4000}
-            >
-              <div>1000+ Influencers</div>
-              <div>1000+ Influencers</div>
-              <div>1000+ Influencers</div>
-              <div>1000+ Influencers</div>
-            </NewsTicker>
-          </TextBox>
+           {
+              tickerBoard.map((item, key) => 
+              <TextBox content={item[key]}>
+                <NewsTicker
+                  key={key}
+                  ref={ref}
+                  id="nt-example1"
+                  direction={Directions.UP}
+                  rowHeight={30}
+                  maxRows={1}
+                  duration={4000}
+                >
+                  <div>{item}</div>
+                  <div>{item}</div>
+                  <div>{item}</div>
+                  <div>{item}</div>
+                </NewsTicker>
+              </TextBox>
+              )
+            }
         </div>
 
         <div className="col-span-1 flex gap-x-4 items-center mt-8">
@@ -330,9 +260,9 @@ const HomePage = () => {
             </p>
 
             <div className="flex justify-between items-center">
-              <button className="bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
+              <Link href={'/contact'} className="flex items-center justify-center bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
                 Link it to Contact us
-              </button>
+              </Link>
               <img
                 alt="aviator"
                 src="/assets/avatar.png"
@@ -349,7 +279,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[280px] pb-[100px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
+      <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[80px] pb-[50px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
         <p className="text-primary mb-10 md:text-left text-center">
           Our Casestudies
         </p>
@@ -359,10 +289,29 @@ const HomePage = () => {
             <WorkItem
               key={key}
               className="lg:col-span-1 col-span-3"
-              title={`Secret Temptation`}
-              description="Campaign Objective To bring on board a suitable face for their brand especially from the south market to drive awareness & interest for the launch of its new perfume roll on."
+              title={caseStudies[key].title}
+              description={caseStudies[key].description}
               link={item}
             />
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
+        <p className="text-primary lg:text-3xl text-xl font-bold">
+          Our Standard Operating Processes
+        </p>
+
+        <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
+          {expectation.map((item, key) => (
+            <div key={key} className="bg-gold p-10 rounded-2xl">
+              <img className="mx-auto" src={"/assets/svg/" + item.icon + ".svg"} />
+
+              <h1 className="lg:text-lg text-base font-bold mt-6 text-center">
+                {item.subTitle}
+              </h1>
+              <p className="lg:text-lg text-base text-center">{item.description}</p>
+            </div>
           ))}
         </div>
       </div>

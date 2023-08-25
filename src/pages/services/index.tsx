@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { expectation } from "@/constants";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const Services = () => {
+  const [tabIndex, setTabIndex] = useState<number>(0);
+
   return (
     <div className="relative font-Mont">
       <img
@@ -33,18 +36,18 @@ const Services = () => {
 
       <div className="grid lg:grid-cols-2 grid-cols-1">
         <div className="col-span-2 flex justify-center">
-          <Tabs className="w-full my-4 xl:px-20 lg:px-12 px-6">
+          <Tabs className="w-full my-4 xl:px-20 lg:px-12 px-6" selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
             <TabList className="grid grid-cols-4 gap-10 justify-around my-5">
-              <Tab className="cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2">
+              <Tab className={`${tabIndex === 0 ? "bg-gold border-gold" : " border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL LABS
               </Tab>
-              <Tab className="cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2">
+              <Tab className={`${tabIndex === 1 ? "bg-gold border-gold" : "border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL SETS
               </Tab>
-              <Tab className="cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2">
+              <Tab className={`${tabIndex === 2 ? "bg-gold border-gold" : "border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL PRODUCTION
               </Tab>
-              <Tab className="cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2">
+              <Tab className={`${tabIndex === 3 ? "bg-gold border-gold" : "border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL BIZ
               </Tab>
             </TabList>
@@ -132,6 +135,10 @@ const Services = () => {
                   Partnering with celebs for long-term gains
                   <br></br>
                   Working together on business plans & innovations
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
                 </span>
               </div>
             </TabPanel>
@@ -141,18 +148,18 @@ const Services = () => {
 
       <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
         <p className="text-primary lg:text-3xl text-xl font-bold">
-          What can you expect on the Social Aviator Tarmac?
+          Our Standard Operating Processes  
         </p>
 
         <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
           {expectation.map((item, key) => (
-            <div key={key}>
-              <img src={"/assets/svg/" + item.icon + ".svg"} />
+            <div key={key} className="bg-gold p-10 rounded-2xl">
+              <img className="mx-auto" src={"/assets/svg/" + item.icon + ".svg"} />
 
-              <h1 className="lg:text-lg text-base font-bold mt-6">
+              <h1 className="lg:text-lg text-base font-bold mt-6 text-center">
                 {item.subTitle}
               </h1>
-              <p className="lg:text-lg text-base">{item.description}</p>
+              <p className="lg:text-lg text-base text-center">{item.description}</p>
             </div>
           ))}
         </div>
