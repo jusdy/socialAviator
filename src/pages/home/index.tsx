@@ -315,6 +315,15 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+
+      <div className="relative mt-40 flex flex-col lg:items-start items-center z-50 pb-40 xl:px-20 lg:px-12 px-6">
+          <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
+            Ready to take your brand to greater heights?
+          </p>
+          <Link href={"/contact"} className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm">
+            get in touch
+          </Link>
+      </div>
     </div>
   );
 };
