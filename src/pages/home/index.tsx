@@ -14,6 +14,7 @@ import { instgramLinks } from "@/constants/instgram";
 import WorkItem from "@/components/WorkItem";
 import ExpandingVideo from "@/components/ExpandingVideo";
 import VideoCarousel from "@/components/VideoCarousel";
+import ServiceTabs from "@/components/serviceTabs";
 
 const responsive2 = {
   desktop: {
@@ -297,24 +298,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
-        <p className="text-primary lg:text-3xl text-xl font-bold">
-          Our Standard Operating Processes
-        </p>
-
-        <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
-          {expectation.map((item, key) => (
-            <div key={key} className="bg-gold p-10 rounded-2xl">
-              <img className="mx-auto" src={"/assets/svg/" + item.icon + ".svg"} />
-
-              <h1 className="lg:text-lg text-base font-bold mt-6 text-center">
-                {item.subTitle}
-              </h1>
-              <p className="lg:text-lg text-base text-center">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ServiceTabs/>
 
       <div className="relative mt-40 flex flex-col lg:items-start items-center z-50 pb-40 xl:px-20 lg:px-12 px-6">
           <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
