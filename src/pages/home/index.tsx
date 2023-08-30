@@ -69,7 +69,7 @@ const HomePage = () => {
       <img
         alt="aviator footer"
         src="/assets/images/footer-top.png"
-        className="w-full absolute -bottom-1"
+        className="w-full absolute -bottom-1 z-50"
       />
       <div className="relative lg:h-[100vh] h-fit bg-gold flex lg:flex-nowrap flex-wrap 2xl:gap-x-[230px] gap-x-[100px] overflow-x-hidden">
         <img
@@ -111,7 +111,7 @@ const HomePage = () => {
             Social Aviator is not just an influencer marketer but a holistic
             solutions platform that helps your brand’s growth by conceptualising
             and executing tailored content-led strategies that help you connect
-            better with your target audience. With a dynamic trio of innovative
+            better with your target audience.<br/><br/>With a dynamic trio of innovative
             avenues – Social Brand Labs, Social Artificial Intelligence, Machine
             Learning & Social Ventures – we craft your brand's journey towards
             excellence, distinction, and prominence.
@@ -166,7 +166,7 @@ const HomePage = () => {
 
         <VideoCarousel>
           {Array(3).fill("").map((item, key) => 
-          <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] rounded-3xl">
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px]">
             <video
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -282,7 +282,7 @@ const HomePage = () => {
 
       <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[80px] pb-[50px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
         <p className="text-primary mb-10 md:text-left text-center">
-          Our Casestudies
+          Our Case Studies
         </p>
 
         <div className="grid grid-cols-3 gap-y-8">
@@ -298,9 +298,28 @@ const HomePage = () => {
         </div>
       </div>
 
+      <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
+        <p className="text-primary lg:text-3xl text-xl font-bold">
+          Our Standard Operating Processes  
+        </p>
+
+        <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
+          {expectation.map((item, key) => (
+            <div key={key} className="bg-gold p-10 rounded-2xl">
+              <img className="mx-auto" src={"/assets/svg/" + item.icon + ".svg"} />
+
+              <h1 className="lg:text-lg text-base font-bold mt-6 text-center">
+                {item.subTitle}
+              </h1>
+              <p className="lg:text-lg text-base text-center">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <ServiceTabs/>
 
-      <div className="relative mt-40 flex flex-col lg:items-start items-center z-50 pb-40 xl:px-20 lg:px-12 px-6">
+      <div className="relative mt-40 flex flex-col lg:items-start items-center pb-40 xl:px-20 lg:px-12 px-6 pt-16 bg-[#FFF7D3]">
           <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
             Ready to take your brand to greater heights?
           </p>

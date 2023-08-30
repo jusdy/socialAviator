@@ -8,16 +8,16 @@ const ServiceTabs = () => {
         <div className="col-span-2 flex justify-center">
           <Tabs className="w-full my-4 xl:px-20 lg:px-12 px-6" selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
             <TabList className="grid grid-cols-4 gap-10 justify-around my-5">
-              <Tab className={`${tabIndex === 0 ? "bg-gold border-gold" : " border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
+              <Tab className={`${tabIndex === 0 ? "bg-gold border-gold text-secondary" : " border-secondary text-black"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL LABS
               </Tab>
-              <Tab className={`${tabIndex === 1 ? "bg-gold border-gold" : "border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
+              <Tab className={`${tabIndex === 1 ? "bg-gold border-gold text-secondary" : "border-secondary text-black"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL SETS
               </Tab>
-              <Tab className={`${tabIndex === 2 ? "bg-gold border-gold" : "border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
+              <Tab className={`${tabIndex === 2 ? "bg-gold border-gold text-secondary" : "border-secondary text-black"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL PRODUCTION
               </Tab>
-              <Tab className={`${tabIndex === 3 ? "bg-gold border-gold" : "border-secondary"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
+              <Tab className={`${tabIndex === 3 ? "bg-gold border-gold text-secondary" : "border-secondary text-black"} cursor-pointer border-b-2 hover:bg-gold p-2 py-6 w-full text-center font-semibold transition-all md:col-span-1 col-span-2`}>
                 SOCIAL BIZ
               </Tab>
             </TabList>
@@ -28,20 +28,14 @@ const ServiceTabs = () => {
                   Social Labs
                 </h1>
 
-                <span className="text-black lg:text-lg text-base">
-                  Campaign Planning
-                  <br></br>
-                  Creative Strategy
-                  <br></br>
-                  Collaboration with Leading Influencers/ Celebrities
-                  <br></br>
-                  Post Campaign Report
-                  <br></br>
-                  Script Writing Support
-                  <br></br>
-                  Absolute execution support
-                  <br></br>
-                  Quick turnaround time
+                <span className="text-black lg:text-lg text-base list-disc">
+                  <li> Campaign Planning </li>
+                  <li> Creative Strategy</li>
+                  <li> Collaboration with Leading Influencers/ Celebrities</li>
+                  <li> Post Campaign Report</li>
+                  <li> Script Writing Support</li>
+                  <li> Absolute execution support</li>
+                  <li> Quick turnaround time</li>
                 </span>
               </div>
             </TabPanel>
@@ -51,21 +45,15 @@ const ServiceTabs = () => {
                   Social Sets
                 </h1>
 
-                <span className="text-black lg:text-lg text-base">
-                  Access to existing venues
-                  <br></br>
-                  Saves you cost & time for art setup
-                  <br></br>
-                  Options to choose from
-                  <br></br>
-                  Helps enhance to production value
-                  <br></br>
-                  Helps you think of a better creative approach
-                  <br></br>
-                  Most cost-effective pricing
-                  <br></br>
-                  Reduces efforts for coordination with multiple vendors
-                </span>
+                <ol className="text-black lg:text-lg text-base list-disc">
+                  <li>Access to existing venues</li>
+                  <li>Saves you cost & time for art setup</li>
+                  <li>Options to choose from</li>
+                  <li>Helps enhance to production value</li>
+                  <li>Helps you think of a better creative approach</li>
+                  <li>Most cost-effective pricing</li>
+                  <li>Reduces efforts for coordination with multiple vendors</li>
+                </ol>
               </div>
             </TabPanel>
             <TabPanel className="flex justify-center bg-[#FFF7D3]">
@@ -74,20 +62,14 @@ const ServiceTabs = () => {
                   Social Production
                 </h1>
 
-                <span className="text-black lg:text-lg text-base">
-                  Quality equipment for shooting purposes
-                  <br></br>
-                  Best of behind-the-camera crew
-                  <br></br>
-                  Most suitable casting for support cast
-                  <br></br>
-                  End-to-end production support for video & audio creation
-                  <br></br>
-                  End-to-end postproduction support
-                  <br></br>
-                  Most cost-effective pricing
-                  <br></br>
-                  Quick turnaround time
+                <span className="text-black lg:text-lg text-base list-disc">
+                  <li>Quality equipment for shooting purposes</li>
+                  <li>Best of behind-the-camera crew</li>
+                  <li>Most suitable casting for support cast</li>
+                  <li>End-to-end production support for video & audio creation</li>
+                  <li>End-to-end postproduction support</li>
+                  <li>Most cost-effective pricing</li>
+                  <li>Quick turnaround time</li>
                 </span>
               </div>
             </TabPanel>
@@ -98,14 +80,11 @@ const ServiceTabs = () => {
                 </h1>
 
                 <span className="text-black lg:text-lg text-base">
-                  Supporting SMEs across India
-                  <br></br>
-                  Creative Campaign Planning with Celebs
-                  <br></br>
-                  Partnering with celebs for long-term gains
-                  <br></br>
-                  Working together on business plans & innovations
-                  <br></br>
+                  
+                  <li>Supporting SMEs across India</li>
+                  <li>Creative Campaign Planning with Celebs</li>
+                  <li>Partnering with celebs for long-term gains</li>
+                  <li>Working together on business plans & innovations</li>
                   <br></br>
                   <br></br>
                   <br></br>
