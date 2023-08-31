@@ -160,12 +160,12 @@ export const expectation = [
     description:
       "We ensure documentation in the form of agreement creation to ensure celebrities and the brand are aware of their coverage rights",
   },
-  {
-    icon: "renewal",
-    subTitle: "Renewal Plans",
-    description:
-      "We offer renewal plans to extend your usage rights for the content created using  services",
-  },
+  // {
+  //   icon: "renewal",
+  //   subTitle: "Renewal Plans",
+  //   description:
+  //     "We offer renewal plans to extend your usage rights for the content created using  services",
+  // },
 ];
 
 export const caseStudies = [
@@ -174,16 +174,16 @@ export const caseStudies = [
     description:
       "From the house of Mcnroe, a recognized expert in fragrances and perfumes, Secret Temptation is a well-known leading female grooming-personal care brand, known best for its extensive range of Deodorants and Perfume. It is one of the top deodorant brands by the virtue of its exceptional quality and fragrance range",
   },
-  {
-    title: "Campaign Objective",
-    description:
-      "To bring on board a suitable face for their brand especially from the south market to drive awareness & interest for the launch of its new perfume roll on",
-  },
-  {
-    title: "Social Aviator’s Creative Solution ",
-    description:
-      "We identified the most relevant talent and collaborated with Secret Temptation to build a credible & sustainable 3 month long campaign with digital medium usage rights which will be leveraged to build the brand visibility & attain their market share simultaneously.",
-  },
+  // {
+  //   title: "Campaign Objective",
+  //   description:
+  //     "To bring on board a suitable face for their brand especially from the south market to drive awareness & interest for the launch of its new perfume roll on",
+  // },
+  // {
+  //   title: "Social Aviator’s Creative Solution ",
+  //   description:
+  //     "We identified the most relevant talent and collaborated with Secret Temptation to build a credible & sustainable 3 month long campaign with digital medium usage rights which will be leveraged to build the brand visibility & attain their market share simultaneously.",
+  // },
 ];
 
 export const tickerBoard = [
