@@ -7,7 +7,7 @@ import TextBox from "@/components/TextBox";
 import Carousel from "react-multi-carousel";
 import Marquee from "react-fast-marquee";
 import ExpandingCards from "@/components/expandingCards";
-import { cardData, cardData2, caseStudies, tickerBoard, expectation } from "@/constants";
+import { cardData, cardData2, caseStudies, tickerBoard, expectation, celebrities } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
 import { instgramLinks } from "@/constants/instgram";
@@ -165,13 +165,13 @@ const HomePage = () => {
         </div>
 
         <VideoCarousel>
-          {Array(3).fill("").map((item, key) => 
+          {Array(4).fill("").map((item, key) => 
           <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px] border-[8px] border-white">
             <video
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src={"/assets/videos/heading_video_" + (key + 1) + ".mp4"} />
+              <source src={"/assets/videos/Sequence_0" + (key + 1) + ".mp4"} />
             </video>
           </div>
           )}
@@ -203,22 +203,22 @@ const HomePage = () => {
 
         <div className="flex flex-wrap gap-3 w-full justify-center">
           {Array.from([
-            "/assets/videos/videoplayback.mp4",
-            "/assets/videos/video.webm",
-            "/assets/videos/videoplayback.mp4",
-            "/assets/videos/video.webm",
-            "/assets/videos/videoplayback.mp4",
-            "/assets/videos/video.webm",
-            "/assets/videos/videoplayback.mp4",
-            "/assets/videos/video.webm",
-            "/assets/videos/videoplayback.mp4",
-            "/assets/videos/video.webm",
+            "/assets/videos/01_Soha Ali Khan.mp4",
+            "/assets/videos/02_Harbajan Singh.mp4",
+            "/assets/videos/03_Gautam&Pankhuri.mp4",
+            "/assets/videos/04_ShrutiNakul.mp4",
+            "/assets/videos/05_Raashi Khanna.mp4",
+            "/assets/videos/06_Mohsin Khan.mp4",
+            "/assets/videos/07_Jia Shankar.mp4",
+            "/assets/videos/08_Garima.mp4",
+            "/assets/videos/09_Alok Nath.mp4",
+            "/assets/videos/10_Shefali Bagga.mp4",
           ]).map((item, index) => (
             <ExpandingVideo
               key={index}
               video={item}
               setExpandedVideoText={setExpandedVideoText}
-              text={`Video ${index + 1}`}
+              text={celebrities[index]}
             />
           ))}
         </div>
