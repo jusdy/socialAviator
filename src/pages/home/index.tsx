@@ -79,7 +79,7 @@ const HomePage = () => {
         />
         <div className="lg:pt-[250px] pt-[200px] lg:pl-[94px] pl-[30px] lg:pr-0 pr-[30px] 2xl:w-[730px] lg:w-[600px] w-fit z-10 relative grow flex-shrink-0">
           <p className="text-[#050505] text-2xl font-semibold mb-[40px]  animate-entrance">
-            Promote your brand through celebrities via our
+            Promote your brand through
           </p>
 
           {/* <p className='text-secondary lg:text-[84px] text-[40px] font-bold uppercase md:leading-[75px] leading-[50px] tracking-tighter animate-entrance'>social production</p> */}
@@ -166,7 +166,7 @@ const HomePage = () => {
 
         <VideoCarousel>
           {Array(3).fill("").map((item, key) => 
-          <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px]">
+          <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px] border-[8px] border-white">
             <video
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -197,9 +197,9 @@ const HomePage = () => {
       </div>
 
       <div className="mt-[90px] md:mb-[150px] mb-[50px] mx-6">
-        <p className="text-primary md:text-[30px] text-xl font-semibold text-center mb-6">
+        {/* <p className="text-primary md:text-[30px] text-xl font-semibold text-center mb-6">
           Choose from over 1200+ celebrities to promote your business
-        </p>
+        </p> */}
 
         <div className="flex flex-wrap gap-3 w-full justify-center">
           {Array.from([
@@ -286,10 +286,10 @@ const HomePage = () => {
         </p>
 
         <div className="grid grid-cols-3 gap-y-8">
-          {instgramLinks.map((item: string, key) => (
+          {caseStudies.map((item: any, key) => (
             <WorkItem
               key={key}
-              className="lg:col-span-1 col-span-3"
+              className="lg:col-span-1 col-span-3 !col-start-2"
               title={caseStudies[key].title}
               description={caseStudies[key].description}
               link={item}
@@ -298,12 +298,14 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
+      <ServiceTabs/>
+
+      <div className="pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
         <p className="text-primary lg:text-3xl text-xl font-bold">
           Our Standard Operating Processes  
         </p>
 
-        <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-24 gap-y-10">
+        <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-[120px] gap-y-[60px]">
           {expectation.map((item, key) => (
             <div key={key} className="bg-gold p-10 rounded-2xl">
               <img className="mx-auto" src={"/assets/svg/" + item.icon + ".svg"} />
@@ -317,9 +319,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <ServiceTabs/>
-
-      <div className="relative mt-40 flex flex-col lg:items-start items-center pb-40 xl:px-20 lg:px-12 px-6 pt-16 bg-[#FFF7D3]">
+      <div className="relative flex flex-col lg:items-start items-center pb-40 xl:px-20 lg:px-12 px-6 pt-16 bg-[#FFF7D3]">
           <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
             Ready to take your brand to greater heights?
           </p>
