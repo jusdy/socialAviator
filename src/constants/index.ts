@@ -196,3 +196,16 @@ export const tickerBoard = [
     "10+ Categories",
     " 8+ Languages"
 ]
+
+export const celebrities = [
+  "Soha Ali Khan",
+  "Harbajan Singh",
+  "Gautam & Pankhuri",
+  "ShrutiNakul",
+  "Raashi Khanna",
+  "Mohsin Khan",
+  "Jia Shankar",
+  "Garima",
+  "Alok Nath",
+  "Shefali Bagga"
+]
