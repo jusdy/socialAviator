@@ -15,6 +15,7 @@ import WorkItem from "@/components/WorkItem";
 import ExpandingVideo from "@/components/ExpandingVideo";
 import VideoCarousel from "@/components/VideoCarousel";
 import ServiceTabs from "@/components/serviceTabs";
+import OperatingProcess from "@/components/OperatingProcess";
 
 const responsive2 = {
   desktop: {
@@ -181,7 +182,7 @@ const HomePage = () => {
 
       <div className="mt-[90px]">
         <div className="flex gap-x-4 justify-center mb-6 mx-6">
-          <p className="text-primary md:text-[30px] text-lg font-semibold text-center">
+          <p className="text-primary md:text-[30px] text-3xl font-bold text-center">
             Brands Trusting Social Aviator
           </p>
           <img className="w-5" src="assets/svg/heart.svg" />
@@ -201,7 +202,7 @@ const HomePage = () => {
           Choose from over 1200+ celebrities to promote your business
         </p> */}
 
-        <div className="flex flex-wrap gap-3 w-full justify-center">
+        <div className="flex gap-3 w-full justify-center overflow-auto">
           {Array.from([
             "/assets/videos/01_Soha Ali Khan.mp4",
             "/assets/videos/02_Harbajan Singh.mp4",
@@ -280,8 +281,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[80px] pb-[50px] md:px-[76px] px-6 md:text-3xl text-2xl font-semibold">
-        <p className="text-primary mb-10 md:text-left text-center">
+      <div className="lg:flex flex-col hidden bg-[#FFF7D3] w-full pt-16 lg:pb-[80px] pb-[50px] md:px-[76px] px-2 md:text-3xl text-2xl font-semibold">
+        <p className="text-primary mb-10 md:text-left font-bold text-center mx-auto">
           Our Case Studies
         </p>
 
@@ -289,7 +290,7 @@ const HomePage = () => {
           {caseStudies.map((item: any, key) => (
             <WorkItem
               key={key}
-              className="lg:col-span-1 col-span-3 !col-start-2"
+              className="lg:col-span-1 col-span-3 lg:!col-start-2 !col-start-1"
               title={caseStudies[key].title}
               description={caseStudies[key].description}
               link={item}
@@ -300,24 +301,7 @@ const HomePage = () => {
 
       <ServiceTabs/>
 
-      <div className="pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
-        <p className="text-primary lg:text-3xl text-xl font-bold">
-          Our Standard Operating Processes  
-        </p>
-
-        <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-[165px] xl:gap-x-[120px] gap-x-[60px] md:gap-y-[120px] gap-y-[60px]">
-          {expectation.map((item, key) => (
-            <div key={key} className="bg-gold p-10 rounded-2xl">
-              <img className="mx-auto" src={"/assets/svg/" + item.icon + ".svg"} />
-
-              <h1 className="lg:text-lg text-base font-bold mt-6 text-center">
-                {item.subTitle}
-              </h1>
-              <p className="lg:text-lg text-base text-center">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <OperatingProcess/>
 
       <div className="relative flex flex-col lg:items-start items-center pb-40 xl:px-20 lg:px-12 px-6 pt-16 bg-[#FFF7D3]">
           <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">

@@ -11,13 +11,13 @@ const WorkItem = ({ title, description, link, className }: Props) => {
   return (
     <div className={`${className} flex flex-col bg-[#D5413F] rounded-3xl mx-5 overflow-hidden group duration-150`}>
       <div className="relative md:h-[400px] h-[300px] overflow-hidden">
-        <img className="object-cover mx-auto" src="/assets/images/sec1.jpg" alt="" />
+        <img className="w-full mx-auto" src="/assets/images/case_study.png" alt="" />
       </div>
-      <div className="flex flex-col gap-4 p-5 grow">
+      <div className="flex flex-col gap-4 p-10 grow text-center">
         <h3 className="md:text-2xl text-xl font-bold text-white">{title}</h3>
-        <p className="md:text-lg text-sm text-white">{description}</p>
+        <p className="md:text-lg text-sm text-white font-normal !leading-6">{description}</p>
         <Link
-          className="md:text-lg text-base text-txtGold border border-gold w-fit px-3 py-1 rounded-full font-[500] group-hover:text-white group-hover:bg-gold/[.3] mt-auto"          target="_blank"
+          className="md:text-lg text-base mx-auto text-txtGold w-fit px-3 py-1 font-[500] group-hover:text-white uppercase tracking-widest mt-auto" target="_blank"
           href={link}
         >
           Read More

@@ -30,7 +30,7 @@ const ExpandingVideo = ({ video, text, setExpandedVideoText }: Props) => {
 
   return (
     <div
-      className="relative flex justify-center items-center h-[300px] overflow-hidden duration-500 ease-in-out cursor-pointer rounded-3xl"
+      className="relative flex justify-center items-center min-w-[150px] h-[300px] overflow-hidden duration-500 ease-in-out cursor-pointer rounded-3xl"
       style={{
         width: expanded ? "250px" : "150px",
       }}
