@@ -17,7 +17,7 @@ const WorkItem = ({ title, description, link, className }: Props) => {
         <h3 className="md:text-2xl text-xl font-bold text-white">{title}</h3>
         <p className="md:text-lg text-sm text-white font-normal !leading-6">{description}</p>
         <Link
-          className="md:text-lg text-base mx-auto text-txtGold w-fit px-3 py-1 font-[500] group-hover:text-white uppercase tracking-widest mt-auto" target="_blank"
+          className="md:text-lg text-base mx-auto text-txtGold w-fit px-3 py-1 font-[500] group-hover:text-white uppercase tracking-widest mt-auto"
           href={link}
         >
           Read More

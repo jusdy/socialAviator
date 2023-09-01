@@ -37,7 +37,7 @@ const Footer = () => {
         </Link>
         <Link
           className="text-white hover:text-black transition-all"
-          href={"/contact"}
+          href={"/work"}
         >
           work
         </Link>
@@ -52,10 +52,10 @@ const Footer = () => {
       <div className="flex justify-between gap-x-4 items-center">
         <p className="text-base">Follow us:</p>
 
-        <Link href={"/#"}>
+        <Link href={"https://www.linkedin.com/posts/social-aviators_socialaviator-influencermarketingsolutions-activity-7092100514003206144-Ccja/"}>
           <img className="w-5" src="/assets/icons/facebook.png" />
         </Link>
-        <Link href={"/#"}>
+        <Link href={"https://www.instagram.com/socialaviators/"}>
           <img className="w-5" src="/assets/icons/instagram.png" />
         </Link>
         <Link href={"/#"}>

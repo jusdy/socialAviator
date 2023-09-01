@@ -22,7 +22,7 @@ const Header = () => {
                 <Link onClick={() => setMenu(false)} className="" href={"/home"}>home</Link>
                 <Link onClick={() => setMenu(false)} className="" href={"/about"}>about</Link>
                 <Link onClick={() => setMenu(false)} className="" href={"/services"}>services</Link>
-                <Link onClick={() => setMenu(false)} className=""href={"/services"}>work</Link>
+                <Link onClick={() => setMenu(false)} className=""href={"/work"}>work</Link>
                 <Link onClick={() => setMenu(false)} className="" href={"/contact"}>contact</Link>                
             </div>
 
@@ -30,7 +30,7 @@ const Header = () => {
                 <Link className={`${pathname === '/home' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/home"}>home</Link>
                 <Link className={`${pathname === '/about' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/about"}>about</Link>
                 <Link className={`${pathname === '/services' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/services"}>services</Link>
-                <Link className={`text-black hover:text-secondary transition-all`} href={"/contact"}>work</Link>
+                <Link className={`text-black hover:text-secondary transition-all`} href={"/work"}>work</Link>
                 <Link className={`${pathname === '/contact' ? 'text-secondary' : 'text-black'} hover:text-secondary transition-all`} href={"/contact"}>contact</Link>
 
                 <button className="bg-secondary w-[200px] h-[44px] text-white uppercase tracking-widest">

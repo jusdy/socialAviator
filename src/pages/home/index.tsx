@@ -198,11 +198,11 @@ const HomePage = () => {
       </div>
 
       <div className="mt-[90px] md:mb-[150px] mb-[50px] mx-6">
-        {/* <p className="text-primary md:text-[30px] text-xl font-semibold text-center mb-6">
-          Choose from over 1200+ celebrities to promote your business
-        </p> */}
+        <p className="text-primary text-3xl font-bold text-center mb-6">
+          Peek Into Our Creative Endeavours
+        </p>
 
-        <div className="flex gap-3 w-full justify-center overflow-auto">
+        <div className="pt-6 flex gap-3 w-full justify-center overflow-auto">
           {Array.from([
             "/assets/videos/01_Soha Ali Khan.mp4",
             "/assets/videos/02_Harbajan Singh.mp4",
@@ -293,7 +293,7 @@ const HomePage = () => {
               className="lg:col-span-1 col-span-3 lg:!col-start-2 !col-start-1"
               title={caseStudies[key].title}
               description={caseStudies[key].description}
-              link={item}
+              link={"work"}
             />
           ))}
         </div>

@@ -26,26 +26,29 @@ const Services = () => {
 
       <div className="py-16 xl:px-24 lg:px-12 px-6">
         <p className="text-primary lg:text-2xl text-base font-bold text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Social Aviator is created by a group of Creative Maketing enthusiasts
+          with more than 3 decades of combined experience, who want to redefine
+          the way we look at brand solutions, by making infleuncer-led
+          strategies the forefront of their communication. With a strong hold on
+          brands in consumer electronics, e-commerce, food & beverages, and
+          other sectors, we have delivered various successful campaigns that
+          have helped brands create a direct connect with consumers.
         </p>
       </div>
 
-      <ServiceTabs/>
-      
-      <OperatingProcess/>
+      <ServiceTabs />
+
+      <OperatingProcess />
 
       <div className="bg-[#FFF7D3] pt-20 xl:px-20 lg:px-12 px-6 pb-32 z-10">
         <div className="relative flex flex-col lg:items-start items-center z-50">
           <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
             Ready to take your brand to greater heights?
           </p>
-          <Link href={"/contact"} className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm">
+          <Link
+            href={"/contact"}
+            className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm"
+          >
             get in touch
           </Link>
         </div>
