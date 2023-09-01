@@ -281,7 +281,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="lg:flex flex-col hidden bg-[#FFF7D3] w-full pt-16 lg:pb-[80px] pb-[50px] md:px-[76px] px-2 md:text-3xl text-2xl font-semibold">
+      <div className="bg-[#FFF7D3] w-full pt-16 lg:pb-[80px] pb-[50px] md:px-[76px] px-2 md:text-3xl text-2xl font-semibold">
         <p className="text-primary mb-10 md:text-left font-bold text-center mx-auto">
           Our Case Studies
         </p>
