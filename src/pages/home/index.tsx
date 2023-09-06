@@ -202,7 +202,8 @@ const HomePage = () => {
           Peek Into Our Creative Endeavours
         </p>
 
-        <div className="pt-6 flex gap-3 w-full justify-center overflow-auto">
+        <div className="w-full 2xl:flex justify-center block overflow-auto">
+        <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
           {Array.from([
             "/assets/videos/01_Soha Ali Khan-new.mp4",
             "/assets/videos/video.mp4",
@@ -222,6 +223,7 @@ const HomePage = () => {
               text={celebrities[index]}
             />
           ))}
+        </div>
         </div>
 
         <p className="text-primary md:text-[30px] h-[20px] text-xl font-semibold text-center mt-6">
