@@ -204,7 +204,7 @@ const HomePage = () => {
 
         <div className="pt-6 flex gap-3 w-full justify-center overflow-auto">
           {Array.from([
-            "/assets/videos/video.mp4",
+            "/assets/videos/01_Soha Ali Khan-new.mp4",
             "/assets/videos/video.mp4",
             "/assets/videos/video.mp4",
             "/assets/videos/video.mp4",
