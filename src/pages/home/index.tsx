@@ -172,7 +172,7 @@ const HomePage = () => {
               muted
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src={"/assets/videos/Sequence_0" + (key + 1) + ".mp4"} />
+              <source src={"/assets/videos/Sequence_0" + (key + 1) + ".mp4"} type="video/mp4" />
             </video>
           </div>
           )}
