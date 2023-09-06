@@ -1,10 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const router = useRouter();
   const [time, setTime] = useState(0);
   const [play, setPlay] = useState(false);
+
+  useEffect(() => {
+    if (videoRef.current && play) {
+      videoRef.current.volume = 0.2;
+      videoRef.current.play();
+    }
+  }, [play]);
+
   useEffect(() => {
     const id = setInterval(() => {
       setTime((prev) => prev + 1);
@@ -13,7 +22,11 @@ export default function Home() {
 
   return (
     <main className="font-Mont">
-      <div className={`${time >= 12 ? "cursor-pointer" : ""} w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[100px]`}>
+      <div
+        className={`${
+          time >= 12 ? "cursor-pointer" : ""
+        } w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[100px]`}
+      >
         <img
           src="/assets/images/Logo-big.png"
           className={`${
@@ -111,25 +124,28 @@ export default function Home() {
           className={`${time >= 12 ? "block" : "hidden"} w-full z-10`}
           onClick={() => setPlay(true)}
         >
-          {!play &&<>
-            <h1 className="md:text-4xl text-2xl uppercase font-bold md:mt-[180px] mt-[80px] text-center mb-[60px]">
-              READY FOR TAKE-OFF
-            </h1>
+          {!play && (
+            <>
+              <h1 className="md:text-4xl text-2xl uppercase font-bold md:mt-[180px] mt-[80px] text-center mb-[60px]">
+                READY FOR TAKE-OFF
+              </h1>
 
-            <p className="font-semibold text-center animate-bounce">Enter Site</p>
-          </>
-          }
+              <p className="font-semibold text-center animate-bounce">
+                Enter Site
+              </p>
+            </>
+          )}
         </div>
         {play && (
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
               <video
+                ref={videoRef}
                 className="object-cover absolute top-0 left-0 w-full h-full"
-                muted
-                autoPlay
+                playsInline
                 onEnded={() => router.push("/home")}
               >
-                <source src="/assets/videos/video.webm" type="video/webm" />
+                <source src="/assets/videos/video.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
