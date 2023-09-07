@@ -29,11 +29,11 @@ const ContactForm = () => {
     // console.log("Submitting:", data);
     try {
       Email.send({
-        Host: "stefan@socialaviator.co",
-        Username: "email-host",
+        Host: "smtp.gmail.com",
+        Username: "stefan@socialaviator.co",
         Password: "Captain101@101",
-        To: "pauleta0126@gmail.com",
-        From: "greatfortune125@gmail.com",
+        To: "greatfortune125@gmail.com",
+        From: "stefan@socialaviator.co",
         Subject: "Testing js - office",
         Body: "Hola mundo del email port 578",
       });
