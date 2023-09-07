@@ -36,6 +36,7 @@ const ContactForm = () => {
         From: "stefan@socialaviator.co",
         Subject: "Testing js - office",
         Body: "Hola mundo del email port 578",
+        Port: 465
       });
     }catch(err) {
       console.log(err)
