@@ -2,6 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./Input";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Email } from "@/utils/smtp";
 
 const validationSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -25,7 +26,20 @@ const ContactForm = () => {
   });
 
   const onSubmit = handleSubmit((data) => {
-    console.log("Submitting:", data);
+    // console.log("Submitting:", data);
+    try {
+      Email.send({
+        Host: "stefan@socialaviator.co",
+        Username: "email-host",
+        Password: "Captain101@101",
+        To: "pauleta0126@gmail.com",
+        From: "greatfortune125@gmail.com",
+        Subject: "Testing js - office",
+        Body: "Hola mundo del email port 578",
+      });
+    }catch(err) {
+      console.log(err)
+    }
   });
 
   return (
