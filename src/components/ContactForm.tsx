@@ -32,8 +32,8 @@ const ContactForm = () => {
         Host: "smtp.gmail.com",
         Username: "stefan@socialaviator.co",
         Password: "Captain101@101",
-        To: "greatfortune125@gmail.com",
-        From: "stefan@socialaviator.co",
+        To: "stefan@socialaviator.co",
+        From: "greatfortune125@gmail.com",
         Subject: "Testing js - office",
         Body: "Hola mundo del email port 578",
         Port: 465
