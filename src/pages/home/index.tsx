@@ -265,7 +265,7 @@ const HomePage = () => {
 
             <div className="flex justify-between items-center">
               <Link href={'/contact'} className="flex items-center justify-center bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
-                Link it to Contact us
+                Contact us
               </Link>
               <img
                 alt="aviator"
