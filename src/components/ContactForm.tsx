@@ -29,7 +29,6 @@ const ContactForm = () => {
     // console.log("Submitting:", data);
     try {
       Email.send({
-        Host: "smtp.gmail.com",
         Username: "stefan@socialaviator.co",
         Password: "Captain101@101",
         To: "stefan@socialaviator.co",
