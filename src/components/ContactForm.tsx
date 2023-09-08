@@ -32,8 +32,8 @@ const ContactForm = () => {
         Host: "smtp.elasticemail.com",
         Username: "stefan@socialaviator.co",
         Password: "F06F10D58543ABDBB4BAEEA6CA9FB044C534",
-        To: "greatfortune125@gmail.com",
-        From: "stefan@socialaviator.co",
+        To: "stefan@socialaviator.co",
+        From: "greatfortune125@gmail.com",
         Subject: "Testing js - office",
         Body: "Hola mundo del email port 578asdf",
         Port: 2525
