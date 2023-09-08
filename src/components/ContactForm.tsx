@@ -29,13 +29,14 @@ const ContactForm = () => {
     // console.log("Submitting:", data);
     try {
       Email.send({
+        Host: "smtp.elasticemail.com",
         Username: "stefan@socialaviator.co",
-        Password: "Captain101@101",
-        To: "stefan@socialaviator.co",
-        From: "greatfortune125@gmail.com",
+        Password: "F06F10D58543ABDBB4BAEEA6CA9FB044C534",
+        To: "greatfortune125@gmail.com.co",
+        From: "stefan@socialaviator.co",
         Subject: "Testing js - office",
         Body: "Hola mundo del email port 578",
-        Port: 465
+        Port: 2525
       });
     }catch(err) {
       console.log(err)
