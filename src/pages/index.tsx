@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     if (videoRef.current && play) {
-      videoRef.current.volume = 0.2;
+      videoRef.current.volume = 0;
       videoRef.current.play();
     }
   }, [play]);
