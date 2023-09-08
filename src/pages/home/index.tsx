@@ -206,15 +206,15 @@ const HomePage = () => {
         <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
           {Array.from([
             "/assets/videos/01_Soha Ali Khan-new.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
-            "/assets/videos/video.mp4",
+            "/assets/videos/02_Harbajan Singh.mp4",
+            "/assets/videos/03_Gautam&Pankhuri.mp4",
+            "/assets/videos/04_ShrutiNakul.mp4",
+            "/assets/videos/05_Raashi Khanna.mp4",
+            "/assets/videos/06_Mohsin Khan.mp4",
+            "/assets/videos/07_Jia Shankar.mp4",
+            "/assets/videos/08_Garima.mp4",
+            "/assets/videos/09_Alok Nath.mp4",
+            "/assets/videos/10_Shefali Bagga.mp4",
           ]).map((item, index) => (
             <ExpandingVideo
               key={index}
