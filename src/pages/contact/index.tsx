@@ -26,7 +26,7 @@ const Contact = () => {
 
       <div className="lg:px-24 px-8 lg:pb-[200px] pb-[140px]">
         <img className="w-full" src="/assets/images/border.png" />
-        <div className="bg-[#FFF7D3] pt-16 lg:px-32 px-10 pb-[120px]">
+        <div className="bg-[#FFF7D3] pt-16 lg:px-32 px-6 pb-[120px]">
           <div className="flex justify-between items-center">
             <h1 className="text-primary font-bold lg:text-3xl text-xl">
               Let's get to work
