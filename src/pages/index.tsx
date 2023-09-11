@@ -145,7 +145,7 @@ export default function Home() {
                 playsInline
                 onEnded={() => router.push("/home")}
               >
-                <source src="/assets/videos/video.mp4" type="video/mp4" />
+                <source src="/assets/videos/video.mp4#t=0.001" type="video/mp4" />
               </video>
             </div>
           </div>

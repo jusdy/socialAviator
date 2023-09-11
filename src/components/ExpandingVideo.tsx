@@ -44,7 +44,7 @@ const ExpandingVideo = ({ video, text, setExpandedVideoText }: Props) => {
           filter: expanded ? "grayscale(0%)" : "grayscale(100%)",
         }}
       >
-        <source src={video} type="video/mp4" />
+        <source src={video + "#t=0.001"} type="video/mp4" />
       </video>
     </div>
   );
