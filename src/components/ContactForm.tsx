@@ -26,16 +26,15 @@ const ContactForm = () => {
   });
 
   const onSubmit = handleSubmit((data) => {
-    console.log("Submitting:", data);
     try {
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "stefan@socialaviator.co",
         Password: "F06F10D58543ABDBB4BAEEA6CA9FB044C534",
-        To: data.email,
+        To: "stefan@socialaviator.co",
         From: "stefan@socialaviator.co",
-        Subject: "Testing",
-        Body: "Hello World",
+        Subject: "Contact form - Enquiry",
+        Body: `You have received following enquiry from socialaviator website contact us form:\n Name:${data.name}`,
         Port: 2525
       });
     }catch(err) {
