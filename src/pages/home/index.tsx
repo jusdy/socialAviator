@@ -7,7 +7,14 @@ import TextBox from "@/components/TextBox";
 import Carousel from "react-multi-carousel";
 import Marquee from "react-fast-marquee";
 import ExpandingCards from "@/components/expandingCards";
-import { cardData, cardData2, caseStudies, tickerBoard, expectation, celebrities } from "@/constants";
+import {
+  cardData,
+  cardData2,
+  caseStudies,
+  tickerBoard,
+  expectation,
+  celebrities,
+} from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
 import { instgramLinks } from "@/constants/instgram";
@@ -112,10 +119,13 @@ const HomePage = () => {
             Social Aviator is not just an influencer marketer but a holistic
             solutions platform that helps your brand’s growth by conceptualising
             and executing tailored content-led strategies that help you connect
-            better with your target audience.<br/><br/>With a dynamic trio of innovative
-            avenues – Social Brand Labs, Social Artificial Intelligence, Machine
-            Learning & Social Ventures – we craft your brand's journey towards
-            excellence, distinction, and prominence.
+            better with your target audience.
+            <br />
+            <br />
+            With a dynamic trio of innovative avenues – Social Brand Labs,
+            Social Artificial Intelligence, Machine Learning & Social Ventures –
+            we craft your brand's journey towards excellence, distinction, and
+            prominence.
           </p>
           {/* <p
             className={`${
@@ -166,17 +176,23 @@ const HomePage = () => {
         </div>
 
         <VideoCarousel>
-          {Array(4).fill("").map((item, key) => 
-          <div className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px] border-[8px] border-white">
-            <video
-              muted
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            >
-              <source src={"/assets/videos/Sequence_0" + (key + 1) + ".mp4#t=0.001"} type="video/mp4" />
-            </video>
-          </div>
-          )}
-
+          {Array(4)
+            .fill("")
+            .map((item, key) => (
+              <div key={key} className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px] border-[8px] border-white">
+                <video
+                  muted
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                >
+                  <source
+                    src={
+                      "/assets/videos/Sequence_0" + (key + 1) + ".mp4#t=0.001"
+                    }
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            ))}
         </VideoCarousel>
       </div>
 
@@ -203,58 +219,53 @@ const HomePage = () => {
         </p>
 
         <div className="w-full 2xl:flex justify-center block overflow-auto">
-        <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
-          {Array.from([
-            "/assets/videos/01_Soha Ali Khan-new.mp4",
-            "/assets/videos/02_Harbajan Singh.mp4",
-            "/assets/videos/03_Gautam&Pankhuri.mp4",
-            "/assets/videos/04_ShrutiNakul.mp4",
-            "/assets/videos/05_Raashi Khanna.mp4",
-            "/assets/videos/06_Mohsin Khan.mp4",
-            "/assets/videos/07_Jia Shankar.mp4",
-            "/assets/videos/08_Garima.mp4",
-            "/assets/videos/09_Alok Nath.mp4",
-            "/assets/videos/10_Shefali Bagga.mp4",
-          ]).map((item, index) => (
+          <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
+            {Array.from([
+              "/assets/videos/01_Soha Ali Khan-new.mp4",
+              "/assets/videos/02_Harbajan Singh.mp4",
+              "/assets/videos/03_Gautam&Pankhuri.mp4",
+              "/assets/videos/04_ShrutiNakul.mp4",
+              "/assets/videos/05_Raashi Khanna.mp4",
+              "/assets/videos/06_Mohsin Khan.mp4",
+              "/assets/videos/07_Jia Shankar.mp4",
+              "/assets/videos/08_Garima.mp4",
+              "/assets/videos/09_Alok Nath.mp4",
+              "/assets/videos/10_Shefali Bagga.mp4",
+            ]).map((item, index) => (
             <ExpandingVideo
-              key={index}
-              video={item}
-              setExpandedVideoText={setExpandedVideoText}
-              text={celebrities[index]}
-            />
-          ))}
-        </div>
+                key={index}
+                video={item}
+                setExpandedVideoText={setExpandedVideoText}
+                text={celebrities[index]}
+              />
+            ))}
+          </div>
         </div>
 
         <p className="text-primary md:text-[30px] h-[20px] text-xl font-semibold text-center mt-6">
-          {expandedVideoText
-            ? expandedVideoText
-            : ""}
+          {expandedVideoText ? expandedVideoText : ""}
         </p>
       </div>
 
       <div className="py-4 lg:px-[80px] px-[27px] bg-[#894935] grid lg:grid-cols-2 grid-cols-1 gap-x-8 items-center border-0">
         <div className="col-span-1 grid gap-x-2 2xl:h-[165px] gap-y-2 md:grid-cols-2 grid-cols-1 md:text-3xl text-2xl font-normal tracking-widest">
-           {
-              tickerBoard.map((item, key) => 
-              <TextBox content={item[key]}>
-                <NewsTicker
-                  key={key}
-                  ref={ref}
-                  id="nt-example1"
-                  direction={Directions.UP}
-                  rowHeight={30}
-                  maxRows={1}
-                  duration={4000}
-                >
-                  <div>{item}</div>
-                  <div>{item}</div>
-                  <div>{item}</div>
-                  <div>{item}</div>
-                </NewsTicker>
-              </TextBox>
-              )
-            }
+          {tickerBoard.map((item, key) => (
+            <TextBox content={item[key]} key={key}>
+              <NewsTicker
+                ref={ref}
+                id="nt-example1"
+                direction={Directions.UP}
+                rowHeight={30}
+                maxRows={1}
+                duration={4000}
+              >
+                <div>{item}</div>
+                <div>{item}</div>
+                <div>{item}</div>
+                <div>{item}</div>
+              </NewsTicker>
+            </TextBox>
+          ))}
         </div>
 
         <div className="col-span-1 flex gap-x-4 items-center mt-8">
@@ -264,7 +275,10 @@ const HomePage = () => {
             </p>
 
             <div className="flex justify-between items-center">
-              <Link href={'/contact'} className="flex items-center justify-center bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm">
+              <Link
+                href={"/contact"}
+                className="flex items-center justify-center bg-secondary w-[280px] h-[44px] text-white font-semibold uppercase tracking-widest md:text-base text-sm"
+              >
                 Contact us
               </Link>
               <img
@@ -301,17 +315,20 @@ const HomePage = () => {
         </div>
       </div>
 
-      <ServiceTabs/>
+      <ServiceTabs />
 
-      <OperatingProcess/>
+      <OperatingProcess />
 
       <div className="relative flex flex-col lg:items-start items-center pb-40 xl:px-20 lg:px-12 px-6 pt-16 bg-[#FFF7D3]">
-          <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
-            Ready to take your brand to greater heights?
-          </p>
-          <Link href={"/contact"} className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm">
-            get in touch
-          </Link>
+        <p className="font-bold lg:text-3xl text-2xl lg:text-left text-center">
+          Ready to take your brand to greater heights?
+        </p>
+        <Link
+          href={"/contact"}
+          className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm"
+        >
+          get in touch
+        </Link>
       </div>
     </div>
   );
