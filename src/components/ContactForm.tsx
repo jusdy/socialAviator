@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./Input";
 import { useForm } from "react-hook-form";
@@ -17,6 +18,7 @@ const validationSchema = z.object({
 });
 
 const ContactForm = () => {
+  const [isSubmit, setSubmit] = useState(false);
   const {
     register,
     handleSubmit,
@@ -34,11 +36,12 @@ const ContactForm = () => {
         To: "stefan@socialaviator.co",
         From: "stefan@socialaviator.co",
         Subject: "Contact form - Enquiry",
-        Body: `You have received following enquiry from socialaviator website contact us form:\n Name:${data.name}`,
-        Port: 2525
+        Body: `You have received following enquiry from socialaviator website contact us form:\n Name:${data.name}\n Email:${data.email}\n City:${data.city}\n Mobil No:${data.mobile}\n Company:${data.company}`,
+        Port: 2525,
       });
-    }catch(err) {
-      console.log(err)
+      setSubmit(true);
+    } catch (err) {
+      console.log(err);
     }
   });
 
@@ -76,6 +79,8 @@ const ContactForm = () => {
           error={errors.city?.message as string | undefined}
         />
       </div>
+
+      <p className={`${isSubmit ? 'block' : 'hidden'} mt-8 text-secondary font-semibold`}>Thank you! Your details were submitted successfully. We will get back to you shortly.</p>
 
       <button
         type="submit"
