@@ -36,7 +36,7 @@ const ContactForm = () => {
         To: "stefan@socialaviator.co",
         From: "stefan@socialaviator.co",
         Subject: "Contact form - Enquiry",
-        Body: `You have received following enquiry from socialaviator website contact us form:\n Name:${data.name}\n Email:${data.email}\n City:${data.city}\n Mobil No:${data.mobile}\n Company:${data.company}`,
+        Body: `You have received following enquiry from socialaviator website contact us form:\n Name:${data.name}\n Email:${data.email}\n City:${data.city}\n Mobile No:${data.mobile}\n Company:${data.company_website}`,
         Port: 2525,
       });
       setSubmit(true);
