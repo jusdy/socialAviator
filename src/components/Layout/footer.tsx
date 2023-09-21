@@ -38,12 +38,12 @@ const Footer = () => {
         >
           services
         </Link>
-        <Link
+        {/* <Link
           className="text-white hover:text-black transition-all"
           href={"/work"}
         >
           work
-        </Link>
+        </Link> */}
         <Link
           className="text-white hover:text-black transition-all"
           href={"/contact"}

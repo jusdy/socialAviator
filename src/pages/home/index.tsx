@@ -249,7 +249,7 @@ const HomePage = () => {
         <p className="text-primary md:text-[28px] h-[20px] text-xl font-semibold text-center mt-6">
           {expandedVideoText ? expandedVideoText : ""}
         </p>
-        <p className="text-black md:text-[18px] h-[20px] text-xl font-medium text-center mt-6">
+        <p className="text-black md:text-[24px] h-[20px] text-xl font-medium text-center mt-2">
           {expandedVideoDesc ? expandedVideoDesc : ""}
         </p>
       </div>
