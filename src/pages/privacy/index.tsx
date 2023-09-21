@@ -1,6 +1,13 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-[100vh] pt-[150px] px-10"><>
+    <div className="min-h-[100vh]"><>
+    <div className="w-full h-96 bg-gold pt-[174px]">
+
+      <p className="text-secondary lg:text-[84px] text-6xl uppercase font-extrabold text-center tracking-tight">
+        Privacy Policy
+      </p>
+    </div>
+    <div className="px-16 pt-10">
     <h1
       style={{
         marginTop: "0.0000pt",
@@ -1862,8 +1869,8 @@ const PrivacyPolicy = () => {
         exclusive jurisdiction over all issues arising out of this Privacy Policy.
       </span>
     </p>
+  </div>
   </>
-  
     </div>
   );
 };
