@@ -13,7 +13,10 @@ const Footer = () => {
           better with your target audience.
         </p>
         <br/>
-        <p className="md:text-xs text-xs mr-auto">© Social Aviator 2023</p>
+        <div className="flex gap-x-6 items-center">
+          <p className="md:text-xs text-xs">© Social Aviator 2023</p>
+          <Link href={'privacy'} className="text-xs underline underline-offset-2">Privacy Policy</Link>
+        </div>
       </div>
 
       <div className="flex justify-between gap-x-4 uppercase md:text-base text-xs font-semibold">
@@ -53,17 +56,17 @@ const Footer = () => {
         <p className="text-base">Follow us:</p>
 
         <Link href={"https://www.linkedin.com/posts/social-aviators_socialaviator-influencermarketingsolutions-activity-7092100514003206144-Ccja/"}>
-          <img className="w-5" src="/assets/icons/facebook.png" />
+          <img className="w-[18px]" src="/assets/icons/linkedin.png" />
         </Link>
         <Link href={"https://www.instagram.com/socialaviators/"}>
           <img className="w-5" src="/assets/icons/instagram.png" />
         </Link>
-        <Link href={"/#"}>
+        {/* <Link href={"/#"}>
           <img className="w-5" src="/assets/icons/twitter.png" />
         </Link>
         <Link href={"/#"}>
           <img className="w-5" src="/assets/icons/youtube.png" />
-        </Link>
+        </Link> */}
       </div>
     </footer>
   );

@@ -3,25 +3,28 @@ import { useEffect, useRef, useState } from "react";
 interface Props {
   video: string;
   text: string;
+  description: string;
   setExpandedVideoText: (text: string | null) => void;
+  setExpandedVideoDesc: (text: string | null) => void;
 }
 
-const ExpandingVideo = ({ video, text, setExpandedVideoText }: Props) => {
+const ExpandingVideo = ({ video, text, description, setExpandedVideoText, setExpandedVideoDesc }: Props) => {
   const [expanded, setExpanded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
     setExpanded(true);
     setExpandedVideoText(text);
+    setExpandedVideoDesc(description);
   };
 
   const handleMouseLeave = () => {
     setExpanded(false);
     setExpandedVideoText(null);
+    setExpandedVideoDesc(null);
   };
 
   useEffect(() => {
-    console.log(videoRef)
     if (expanded && videoRef.current) {
       videoRef.current.play();
     } else if (!expanded && videoRef.current) {
@@ -44,7 +47,6 @@ const ExpandingVideo = ({ video, text, setExpandedVideoText }: Props) => {
         style={{
           filter: expanded ? "grayscale(0%)" : "grayscale(100%)",
         }}
-        muted
       >
         <source src={video + "#t=0.001"} type="video/mp4" />
       </video>

@@ -84,6 +84,18 @@ export const cardData2 = [
 
 export const expectation = [
   {
+    icon: "brief",
+    subTitle: "Briefing Session",
+    description:
+      "We take the time to understand your requirements & campaign objectives via a virtual call / physical meeting.",
+  },
+  {
+    icon: "creative",
+    subTitle: "Creative Solution",
+    description:
+      "Under the social brand labs our dedicated team provides ideas based on the brief & campaign objective we receive from the client.",
+  },
+  {
     icon: "talent",
     subTitle: "Talent Selection",
     description:
@@ -198,14 +210,27 @@ export const tickerBoard = [
 ]
 
 export const celebrities = [
-  "Soha Ali Khan",
-  "Harbajan Singh",
+  "Soha Pataudi",
+  "Harbajan Singh & Saurabh Ghadge ",
   "Gautam & Pankhuri",
-  "ShrutiNakul",
+  "Shruti & Nakul",
   "Raashi Khanna",
   "Mohsin Khan",
   "Jia Shankar",
-  "Garima",
+  "Shakshi Tanwar",
   "Alok Nath",
   "Shefali Bagga"
+]
+
+export const endeavourDesc = [
+  "Amazon Books",
+  "Oven Story",
+  "So Good",
+  "So Good",
+  "Secret Temptation",
+  "Code Perfumes",
+  "Muskaan Agarwal Label",
+  "Garima Aggarbati",
+  "Eat Sure",
+  "Colors Cineplex"
 ]

@@ -14,6 +14,7 @@ import {
   tickerBoard,
   expectation,
   celebrities,
+  endeavourDesc,
 } from "@/constants";
 import Typewriter from "typewriter-effect";
 import "regenerator-runtime/runtime";
@@ -57,12 +58,13 @@ const responsive2 = {
 
 const HomePage = () => {
   const ref = useRef(null);
-  const [expandedVideoText, setExpandedVideoText] = useState<string | null>(
-    null
-  );
+  const mainRef = useRef<any>(null);
+  const [expandedVideoText, setExpandedVideoText] = useState<string | null>(null);
+  const [expandedVideoDesc, setExpandedVideoDesc] = useState<string | null>(null);
 
   const [time, setTime] = useState(0);
   useEffect(() => {
+    mainRef.current.click();
     const id = setInterval(() => {
       setTime((prev) => prev + 1);
     }, 1000);
@@ -73,7 +75,7 @@ const HomePage = () => {
   }, [time]);
 
   return (
-    <div className="w-full relative font-Mont bg-white">
+    <div className="w-full relative font-Mont bg-white" tabIndex={-1} ref={mainRef}>
       <img
         alt="aviator footer"
         src="/assets/images/footer-top.png"
@@ -236,14 +238,19 @@ const HomePage = () => {
                 key={index}
                 video={item}
                 setExpandedVideoText={setExpandedVideoText}
+                setExpandedVideoDesc={setExpandedVideoDesc}
                 text={celebrities[index]}
+                description={endeavourDesc[index]}
               />
             ))}
           </div>
         </div>
 
-        <p className="text-primary md:text-[30px] h-[20px] text-xl font-semibold text-center mt-6">
+        <p className="text-primary md:text-[28px] h-[20px] text-xl font-semibold text-center mt-6">
           {expandedVideoText ? expandedVideoText : ""}
+        </p>
+        <p className="text-black md:text-[18px] h-[20px] text-xl font-medium text-center mt-6">
+          {expandedVideoDesc ? expandedVideoDesc : ""}
         </p>
       </div>
 
@@ -325,7 +332,7 @@ const HomePage = () => {
         </p>
         <Link
           href={"/contact"}
-          className="bg-secondary mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm"
+          className="bg-secondary z-50 mt-6 w-[200px] h-[44px] text-white flex justify-center items-center font-semibold uppercase tracking-widest md:text-base text-sm"
         >
           get in touch
         </Link>

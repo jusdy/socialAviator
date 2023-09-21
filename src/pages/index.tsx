@@ -41,7 +41,7 @@ export default function Home() {
 
         <div
           className={`${
-            time >= 8 ? "hidden" : "flex"
+            time >= 16 ? "hidden" : "flex"
           } lg:items-center items-start animate-fadeinLogo animation-delay opacity-0 z-10`}
         >
           <div className="flex lg:flex-row flex-col z-20 font-semibold lg:px-[70px] px-5">
@@ -56,8 +56,8 @@ export default function Home() {
 
             <div className="">
               <span className="lg:text-2xl text-lg tracking-wider">
-                Your <span className="bg-primary">one-stop solution</span> for
-                all your influencer marketing objectives
+                Transforming your <span className="bg-primary">brand marketing </span> 
+                to fit the ever-evolving digital world
               </span>
               <img
                 alt="arrow"
@@ -70,11 +70,11 @@ export default function Home() {
 
         <div
           className={`${
-            time >= 8 && time < 12 ? "flex" : "hidden"
-          } lg:mt-20 mt-0 lg:ml-20 ml-5 mr-5 flex-col z-20 animate-fadeinLogo opacity-0`}
+            time >= 16 && time < 32 ? "flex" : "hidden"
+          } lg:mt-20 mt-0 lg:ml-20 ml-5 mr-5 flex-col z-20 animate-fadeinText opacity-0`}
         >
           <h2 className="uppercase font-bold lg:text-2xl text-base mb-6 tracking-wider">
-            We are an influencer marketing company that provides
+            WE ARE A DIGITAL-FIRST MARKETING COMPANY THAT PROVIDES
           </h2>
           <h1 className="uppercase font-bold 2xl:text-[120px] lg:text-[80px] text-3xl 2xl:leading-[100px] lg:leading-[80px] tracking-tighter">
             customized <p>brand solutions</p>
@@ -121,7 +121,7 @@ export default function Home() {
         </div> */}
 
         <div
-          className={`${time >= 12 ? "block" : "hidden"} w-full z-10`}
+          className={`${time >= 32 ? "block" : "hidden"} w-full z-10`}
           onClick={() => setPlay(true)}
         >
           {!play && (
