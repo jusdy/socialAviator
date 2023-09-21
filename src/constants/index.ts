@@ -99,7 +99,7 @@ export const expectation = [
     icon: "talent",
     subTitle: "Talent Selection",
     description:
-      "Choose from various categories of influencers & celebrities based on your budget, preferred reach, industry, etc.",
+      "Social Aviator helps you choose from a varied list of options based on your budget, preferred reach, industry, etc.",
   },
   // {
   //   icon: "venue",
@@ -111,24 +111,24 @@ export const expectation = [
     icon: "preprod",
     subTitle: "Pre-Production",
     description:
-      "Our dedicated team provides ideas and brand-specific script options through the communication channel",
+      "We build the screen-play along with mood boards, identify the locations for the shoot, costumes for the artist & conduct a PPM call (pre-production meeting) with the client to take you through the details of the shoot.",
   },
   {
     icon: "prod",
     subTitle: "Production",
-    description: "The video is then shot based on the service selected by you",
+    description: "We conduct shoots for instagram reels to full blown production for Ad-films / documentaries based on the brands requirement, with our vast experience in this domain we help you with this process end -to-end.",
   },
   {
     icon: "postprod",
     subTitle: "Post-production",
     description:
-      "We then edit the brand-recorded videos with utmost care to better the colour and audio. The inclusion of logos is then made to the video as per the brand's requests",
+      "Post production is a critical aspect of content creation that can greatly enhance the visual appeal and storytelling of videos, films, and other multimedia projects. As an agency, we offer comprehensive post production services to ensure that our clients’ content is polished, professional, and ready for distribution.",
   },
   {
     icon: "delivery",
     subTitle: "Delivery",
     description:
-      "The final high-resolution video is then delivered. In the case of brand-recorded video posting, our team will get the video posted on the celebrity’s social media profile",
+      "We coordinate with the talent for posting the final high resolution video or any other deliverables based on the requirement on their social media handles, the same output is also handed over to the client for further distribution based on the agreement with the talent.",
   },
   // {
   //   icon: "rep",
@@ -164,13 +164,13 @@ export const expectation = [
     icon: "cross",
     subTitle: "Cross Platform Usage",
     description:
-      "Covers brand’s rights from the standpoint of where the content can be used (website, social media, video sharing applications, TV, print, etc.)",
+      "Multiple mediums of advertising can be explored i.e. Digital, TV, Print, Radio, Outdoor, etc  basis the duration needed, we help you bargain a better deal from the talent based on your requirement.",
   },
   {
     icon: "legal",
     subTitle: "Free Legal Coverage",
     description:
-      "We ensure documentation in the form of agreement creation to ensure celebrities and the brand are aware of their coverage rights",
+      "Our legal team ensures documentation via a release order which is signed by the brand & the artist for being on the same page in regards to the campaign association.",
   },
   // {
   //   icon: "renewal",

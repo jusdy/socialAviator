@@ -64,7 +64,11 @@ const HomePage = () => {
 
   const [time, setTime] = useState(0);
   useEffect(() => {
-    mainRef.current.click();
+    if (mainRef.current)
+    {
+      mainRef.current.click();
+      console.log("clicked");
+    }
     const id = setInterval(() => {
       setTime((prev) => prev + 1);
     }, 1000);
@@ -75,7 +79,7 @@ const HomePage = () => {
   }, [time]);
 
   return (
-    <div className="w-full relative font-Mont bg-white" tabIndex={-1} ref={mainRef}>
+    <div className="w-full relative font-Mont bg-white">
       <img
         alt="aviator footer"
         src="/assets/images/footer-top.png"
@@ -220,7 +224,7 @@ const HomePage = () => {
           Peek Into Our Creative Endeavours
         </p>
 
-        <div className="w-full 2xl:flex justify-center block overflow-auto">
+        <div className="w-full 2xl:flex justify-center block overflow-auto" ref={mainRef}>
           <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
             {Array.from([
               "/assets/videos/01_Soha Ali Khan-new.mp4",

@@ -26,6 +26,7 @@ const ExpandingVideo = ({ video, text, description, setExpandedVideoText, setExp
 
   useEffect(() => {
     if (expanded && videoRef.current) {
+      videoRef.current.click();
       videoRef.current.play();
     } else if (!expanded && videoRef.current) {
       videoRef.current.pause();
@@ -47,6 +48,7 @@ const ExpandingVideo = ({ video, text, description, setExpandedVideoText, setExp
         style={{
           filter: expanded ? "grayscale(0%)" : "grayscale(100%)",
         }}
+        muted={true}
       >
         <source src={video + "#t=0.001"} type="video/mp4" />
       </video>
