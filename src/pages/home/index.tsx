@@ -207,10 +207,10 @@ const HomePage = () => {
         </div>
 
         <Marquee>
-          {Array(21)
+          {Array(11)
             .fill("")
             .map((item, key) => (
-              <img key={key} src={`/assets/images/brands${key}.png`} />
+              <img className="mx-4" key={key} src={`/assets/images/brands/brand${key}.png`} />
             ))}
         </Marquee>
       </div>
