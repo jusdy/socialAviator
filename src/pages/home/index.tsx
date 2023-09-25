@@ -228,7 +228,7 @@ const HomePage = () => {
         <div className="w-full 2xl:flex justify-center block overflow-auto" ref={mainRef}>
           <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
             {Array.from([
-              "/assets/videos/01_Soha Ali Khan-new.mp4",
+              "/assets/videos/01_Soha Ali Khan.mp4",
               "/assets/videos/02_Harbajan Singh.mp4",
               "/assets/videos/03_Gautam&Pankhuri.mp4",
               "/assets/videos/04_ShrutiNakul.mp4",
