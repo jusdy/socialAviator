@@ -49,7 +49,6 @@ const ExpandingVideo = ({ video, text, description, setExpandedVideoText, setExp
         style={{
           filter: expanded ? "grayscale(0%)" : "grayscale(100%)",
         }}
-        muted
       >
         <source src={video + "#t=0.001"} type="video/mp4" />
       </video>
