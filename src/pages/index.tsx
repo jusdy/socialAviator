@@ -138,7 +138,7 @@ export default function Home() {
         </div>
         {play && (
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
+            <div className="relative w-full h-full overflow-hidden flex justify-center items-center z-0">
               <video
                 playsInline
                 ref={videoRef}
