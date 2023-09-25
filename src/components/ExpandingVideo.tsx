@@ -43,12 +43,13 @@ const ExpandingVideo = ({ video, text, description, setExpandedVideoText, setExp
       onMouseLeave={handleMouseLeave}
     >
       <video
+        playsInline
         ref={videoRef}
         className="absolute top-0 left-0 w-full h-full object-cover"
         style={{
           filter: expanded ? "grayscale(0%)" : "grayscale(100%)",
         }}
-        muted={true}
+        muted
       >
         <source src={video + "#t=0.001"} type="video/mp4" />
       </video>

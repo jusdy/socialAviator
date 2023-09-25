@@ -140,10 +140,11 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
               <video
+                playsInline
                 ref={videoRef}
                 className="object-cover absolute top-0 left-0 w-full h-full"
-                playsInline
                 onEnded={() => router.push("/home")}
+                muted
               >
                 <source src="/assets/videos/video.mp4#t=0.001" type="video/mp4" />
               </video>

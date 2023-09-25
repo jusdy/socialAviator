@@ -187,6 +187,7 @@ const HomePage = () => {
             .map((item, key) => (
               <div key={key} className="relative flex justify-center items-center overflow-hidden w-[400px] md:h-[500px] h-[300px] lg:rounded-[150px] md:rounded-[100px] rounded-[60px] border-[8px] border-white">
                 <video
+                  playsInline
                   muted
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 >
