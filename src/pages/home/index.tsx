@@ -177,7 +177,7 @@ const HomePage = () => {
             associate with influencers/ celebs by working out a long-term
             business association without having to pay anything upfront. We
             design a business plan which is a win-win for all parties associated
-            by connecting businesses to relevant influencers/celebs.
+            by connecting businesses to relevant influencers/celebs
           </p> */}
         </div>
 
