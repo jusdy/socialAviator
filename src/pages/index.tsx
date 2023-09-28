@@ -24,7 +24,7 @@ export default function Home() {
     <main className="font-Mont">
       <div
         className={`${
-          time >= 12 ? "cursor-pointer" : ""
+          time >= 32 ? "cursor-pointer" : ""
         } w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[100px]`}
       >
         <img
@@ -56,7 +56,8 @@ export default function Home() {
 
             <div className="">
               <span className="lg:text-2xl text-lg tracking-wider">
-                Transforming your <span className="bg-primary">brand marketing </span> 
+                Transforming your{" "}
+                <span className="bg-primary">brand marketing </span>
                 to fit the ever-evolving digital world
               </span>
               <img
@@ -140,13 +141,17 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="relative w-full h-full overflow-hidden flex justify-center items-center z-0">
               <video
+                preload="auto"
                 playsInline
                 ref={videoRef}
                 className="object-cover absolute top-0 left-0 w-full h-full"
                 onEnded={() => router.push("/home")}
                 muted
               >
-                <source src="/assets/videos/video.mp4#t=0.001" type="video/mp4" />
+                <source
+                  src="/assets/videos/video.mp4#t=0.001"
+                  type="video/mp4"
+                />
               </video>
             </div>
           </div>

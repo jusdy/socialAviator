@@ -4,7 +4,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 const ServiceTabs = () => {
   const [tabIndex, setTabIndex] = useState<number>(0);
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1">
+    <div className="grid lg:grid-cols-2 grid-cols-1 text-black">
       <div className="col-span-2 flex justify-center">
         <Tabs
           className="w-full my-4 xl:px-20 lg:px-12 px-0"

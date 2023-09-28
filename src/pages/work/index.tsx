@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const CaseStudy = () => {
   return (
-    <div className="relative font-Mont">
+    <div className="relative font-Mont bg-white text-black">
       <img
         alt="aviator footer"
         src="/assets/images/footer-top.png"
         className="w-full absolute -bottom-1 -z-1"
       />
       <div className="w-full h-96 bg-gold pt-[174px]">
-        <p className="text-black lg:text-2xl text-xl font-semibold text-center">
+        <p className="lg:text-2xl text-xl font-semibold text-center">
           Case Study
         </p>
         <p className="text-secondary lg:text-[84px] text-6xl uppercase font-extrabold text-center tracking-tight">
