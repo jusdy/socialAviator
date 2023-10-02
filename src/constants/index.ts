@@ -216,7 +216,7 @@ export const celebrities = [
   "Shruti & Nakul",
   "Raashi Khanna",
   "Mohsin Khan",
-  "Jia Shankar",
+  "Jiya Shankar",
   "Shakshi Tanwar",
   "Alok Nath",
   "Shefali Bagga"

@@ -26,7 +26,6 @@ const ExpandingVideo = ({ video, text, description, setExpandedVideoText, setExp
 
   useEffect(() => {
     if (expanded && videoRef.current) {
-      videoRef.current.click();
       videoRef.current.play();
     } else if (!expanded && videoRef.current) {
       videoRef.current.pause();

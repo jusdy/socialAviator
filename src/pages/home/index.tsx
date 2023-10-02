@@ -58,17 +58,11 @@ const responsive2 = {
 
 const HomePage = () => {
   const ref = useRef(null);
-  const mainRef = useRef<any>(null);
   const [expandedVideoText, setExpandedVideoText] = useState<string | null>(null);
   const [expandedVideoDesc, setExpandedVideoDesc] = useState<string | null>(null);
 
   const [time, setTime] = useState(0);
   useEffect(() => {
-    if (mainRef.current)
-    {
-      mainRef.current.click();
-      console.log("clicked");
-    }
     const id = setInterval(() => {
       setTime((prev) => prev + 1);
     }, 1000);
@@ -226,7 +220,7 @@ const HomePage = () => {
           Peek Into Our Creative Endeavours
         </p>
 
-        <div className="w-full 2xl:flex justify-center block overflow-auto" ref={mainRef}>
+        <div className="w-full 2xl:flex justify-center block overflow-auto">
           <div className="pt-6 flex gap-3 w-fit justify-center overflow-auto">
             {Array.from([
               "/assets/videos/01_Soha Ali Khan.mp4",
