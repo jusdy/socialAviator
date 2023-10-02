@@ -37,10 +37,10 @@ const About = () => {
 
         <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10">
           {teamInfo.map((item, key) => (
-            <div className="col-span-1" key={key}>
+            <div className="col-span-1 flex flex-col items-center" key={key}>
               <img
-                className="rounded-md w-full"
-                src="/assets/images/Logo-big.png"
+                className="rounded-md h-[400px] w-fit"
+                src={`/assets/team/${item.image}.jpeg`}
               />
 
               <p className="text-primary text-center text-2xl font-bold mt-10">

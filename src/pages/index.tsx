@@ -8,10 +8,13 @@ export default function Home() {
   const [play, setPlay] = useState(false);
 
   useEffect(() => {
-    if (videoRef.current && play) {
-      videoRef.current.volume = 0;
-      videoRef.current.play();
+    if (play) {
+      router.push("/home");
     }
+    // if (videoRef.current && play) {
+    //   videoRef.current.volume = 0;
+    //   videoRef.current.play();
+    // }
   }, [play]);
 
   useEffect(() => {
@@ -24,15 +27,15 @@ export default function Home() {
     <main className="font-Mont">
       <div
         className={`${
-          time >= 32 ? "cursor-pointer" : ""
+          time >= 24 ? "cursor-pointer" : ""
         } w-[100vw] h-[100vh] flex relative bg-ground bg-center bg-cover text-white lg:pt-0 pt-[100px]`}
       >
-        <img
+        {/* <img
           src="/assets/images/Logo-big.png"
           className={`${
             time >= 8 ? "hidden" : "flex"
           } absolute top-[80px] lg:w-[850px] w-[380px] lg:left-[calc(50%-430px)] left-[calc(50%-188px)] animate-fadeinLogo opacity-0 z-10`}
-        />
+        /> */}
 
         <img
           src="/assets/images/bigplane.png"
@@ -41,8 +44,8 @@ export default function Home() {
 
         <div
           className={`${
-            time >= 16 ? "hidden" : "flex"
-          } lg:items-center items-start animate-fadeinLogo animation-delay opacity-0 z-10`}
+            time >= 8 ? "hidden" : "flex"
+          } lg:items-center items-start animate-fadeinLogo opacity-0 z-10`}
         >
           <div className="flex lg:flex-row flex-col z-20 font-semibold lg:px-[70px] px-5">
             <div>
@@ -71,7 +74,7 @@ export default function Home() {
 
         <div
           className={`${
-            time >= 16 && time < 32 ? "flex" : "hidden"
+            time >= 8 && time < 24 ? "flex" : "hidden"
           } lg:mt-20 mt-0 lg:ml-20 ml-5 mr-5 flex-col z-20 animate-fadeinText opacity-0`}
         >
           <h2 className="uppercase font-bold lg:text-2xl text-base mb-6 tracking-wider">
@@ -122,7 +125,7 @@ export default function Home() {
         </div> */}
 
         <div
-          className={`${time >= 32 ? "block" : "hidden"} w-full z-10`}
+          className={`${time >= 24 ? "block" : "hidden"} w-full z-10`}
           onClick={() => setPlay(true)}
         >
           {!play && (
@@ -137,7 +140,7 @@ export default function Home() {
             </>
           )}
         </div>
-        {play && (
+        {/* {play && (
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="relative w-full h-full overflow-hidden flex justify-center items-center z-0">
               <video
@@ -155,7 +158,7 @@ export default function Home() {
               </video>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </main>
   );
