@@ -324,7 +324,7 @@ const HomePage = () => {
 
       <div className="w-full flex">
         <h1 className="text-primary mb-10 md:text-left font-bold text-center mx-auto md:text-3xl text-2xl mt-10">
-          What we offer
+          What We Offer
         </h1>
       </div>
 

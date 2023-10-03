@@ -14,12 +14,12 @@ const Header = () => {
             </Link>
 
             <div className="lg:hidden flex gap-x-12 items-center">
-                <Link href={"https://www.linkedin.com/posts/social-aviators_socialaviator-influencermarketingsolutions-activity-7092100514003206144-Ccja/"}>
+                {/* <Link href={"https://www.linkedin.com/posts/social-aviators_socialaviator-influencermarketingsolutions-activity-7092100514003206144-Ccja/"}>
                     <img className="w-[18px]" src="/assets/icons/linkedin.png" />
                 </Link>
                 <Link href={"https://www.instagram.com/socialaviators/"}>
                     <img className="w-5" src="/assets/icons/instagram.png" />
-                </Link>
+                </Link> */}
                 <Link href={""}><img src="/assets/svg/whatsapp.svg"/></Link>
                 <Link href={""} onClick={() => setMenu(prev => !prev)}><img src="/assets/svg/menu.svg"/></Link>
             </div>
@@ -42,12 +42,12 @@ const Header = () => {
                 <Link href={'/contact'} className="flex items-center justify-center bg-secondary w-[200px] h-[44px] text-white uppercase tracking-widest">
                     Talk To Expert
                 </Link>
-                <Link href={"https://www.linkedin.com/posts/social-aviators_socialaviator-influencermarketingsolutions-activity-7092100514003206144-Ccja/"}>
+                {/* <Link href={"https://www.linkedin.com/posts/social-aviators_socialaviator-influencermarketingsolutions-activity-7092100514003206144-Ccja/"}>
                     <img className="w-[18px]" src="/assets/icons/linkedin.png" />
                 </Link>
                 <Link href={"https://www.instagram.com/socialaviators/"}>
                     <img className="w-5" src="/assets/icons/instagram.png" />
-                </Link>
+                </Link> */}
             </div>
         </header>
     )
